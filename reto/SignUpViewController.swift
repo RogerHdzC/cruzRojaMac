@@ -50,5 +50,11 @@ class SignUpViewController: UIViewController {
         
         self.navigationController?.pushViewController(viewLogIn, animated: true)
     }
+    
+    // Método para ocultar el teclado cuando se toca en otra parte de la pantalla
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
 }
 
