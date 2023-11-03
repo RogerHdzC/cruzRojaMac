@@ -10,6 +10,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InicioViewController" customModule="reto" customModuleProvider="target">
             <connections>
                 <outlet property="emailLabel" destination="qKY-UA-gJR" id="f96-6q-d1G"/>
+                <outlet property="logOutButton" destination="uwE-XJ-TEC" id="4Aw-hh-z8f"/>
                 <outlet property="view" destination="iN0-l3-epB" id="rZb-Sc-mOk"/>
             </connections>
         </placeholder>
