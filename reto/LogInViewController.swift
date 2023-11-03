@@ -40,7 +40,7 @@ class LogInViewController: UIViewController {
                 guard let self = self else {return}
                 
                 if let error = error {
-                    
+                        
                     let alertController = UIAlertController(title: "Error", message: "Credenciales inválidas o usuario no aprobado", preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
                     

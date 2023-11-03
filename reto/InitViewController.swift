@@ -27,5 +27,13 @@ class InitViewController: UIViewController {
         
         self.navigationController?.pushViewController(viewSignUp, animated: true)
     }
+    
+    
+    @IBAction func testAction(_ sender: Any) {
+        let view = AprobarUserViewController()
+        
+        self.navigationController?.pushViewController(view, animated: true)
+    }
+    
 }
 
