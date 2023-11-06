@@ -62,7 +62,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
                                 <connections>
-                                    <action selector="testAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oRU-pE-Lfc"/>
+                                    <action selector="tableViewNav:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N2g-Yv-d7b"/>
                                 </connections>
                             </button>
                         </subviews>

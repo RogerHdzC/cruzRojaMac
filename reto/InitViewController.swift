@@ -29,10 +29,11 @@ class InitViewController: UIViewController {
     }
     
     
-    @IBAction func testAction(_ sender: Any) {
-        let view = AprobarUserViewController()
+    @IBAction func tableViewNav(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "AprobarUserViewController", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "AprobarUserViewController")
         
-        self.navigationController?.pushViewController(view, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
     
 }

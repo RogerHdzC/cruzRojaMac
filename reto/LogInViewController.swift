@@ -100,5 +100,14 @@ class LogInViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
+    
+    
+    @IBAction func olvidarContrasenaAction(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "RecuperarContrasenaViewController", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "RecuperarContrasenaViewController")
+        
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }
 

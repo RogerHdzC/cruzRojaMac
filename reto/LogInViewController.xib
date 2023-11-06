@@ -93,6 +93,9 @@
                             <buttonConfiguration key="configuration" style="plain" title="¿Olvidaste tu contraseña?">
                                 <color key="baseForegroundColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </buttonConfiguration>
+                            <connections>
+                                <action selector="olvidarContrasenaAction:" destination="-1" eventType="touchUpInside" id="kAQ-fi-DZc"/>
+                            </connections>
                         </button>
                     </subviews>
                 </stackView>
