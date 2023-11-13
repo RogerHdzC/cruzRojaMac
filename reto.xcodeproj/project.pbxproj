@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		831763CD2AF2BA33008627F4 /* DashboardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 831763CC2AF2BA33008627F4 /* DashboardViewController.xib */; };
-		831763CF2AF2BA44008627F4 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831763CE2AF2BA44008627F4 /* DashboardViewController.swift */; };
 		833A71C62AEFF70800AE3339 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 833A71C52AEFF70800AE3339 /* FirebaseAnalytics */; };
 		833A71C82AEFF70800AE3339 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 833A71C72AEFF70800AE3339 /* FirebaseAnalyticsOnDeviceConversion */; };
 		833A71CA2AEFF70800AE3339 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 833A71C92AEFF70800AE3339 /* FirebaseAnalyticsSwift */; };
@@ -30,12 +28,22 @@
 		833A71F02AF06D8F00AE3339 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 833A71EF2AF06D8F00AE3339 /* SignUpViewController.xib */; };
 		837A78512AF41353009E2A60 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 837A78502AF41353009E2A60 /* FirebaseFirestore */; };
 		837A78532AF4135C009E2A60 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 837A78522AF4135C009E2A60 /* FirebaseStorage */; };
+		839616DC2AFD1CF000D7D6E1 /* AnunciosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839616DB2AFD1CF000D7D6E1 /* AnunciosViewController.swift */; };
+		839616DE2AFD1D4D00D7D6E1 /* AnunciosViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839616DD2AFD1D4D00D7D6E1 /* AnunciosViewController.storyboard */; };
+		839616E12AFD1D6900D7D6E1 /* AnuncioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839616DF2AFD1D6900D7D6E1 /* AnuncioTableViewCell.swift */; };
+		839616E22AFD1D6900D7D6E1 /* AnuncioTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 839616E02AFD1D6900D7D6E1 /* AnuncioTableViewCell.xib */; };
+		839616E42AFD4C8600D7D6E1 /* DashboardViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839616E32AFD4C8600D7D6E1 /* DashboardViewController.storyboard */; };
+		839616E62AFD4C9C00D7D6E1 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839616E52AFD4C9C00D7D6E1 /* DashboardViewController.swift */; };
 		8399B14A2AF1B0E9006D68E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8399B1492AF1B0E9006D68E8 /* GoogleService-Info.plist */; };
+		839F3A6A2AFC0361002D48F9 /* MenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839F3A692AFC0361002D48F9 /* MenuViewController.storyboard */; };
+		839F3A6C2AFC03BD002D48F9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839F3A6B2AFC03BD002D48F9 /* MenuViewController.swift */; };
 		83A3035E2AF99B3900744625 /* AprobarUserViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A3035D2AF99B3900744625 /* AprobarUserViewController.storyboard */; };
 		83A303612AF9A70800744625 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A3035F2AF9A70800744625 /* UserTableViewCell.swift */; };
 		83A303622AF9A70800744625 /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83A303602AF9A70800744625 /* UserTableViewCell.xib */; };
 		83A303642AF9ACED00744625 /* RecuperarContrasenaViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A303632AF9ACED00744625 /* RecuperarContrasenaViewController.storyboard */; };
 		83A303662AF9AD0100744625 /* RecuperarContraseñaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A303652AF9AD0100744625 /* RecuperarContraseñaViewController.swift */; };
+		83A3504A2B0268B70023A084 /* NuevoAnuncioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A350492B0268B70023A084 /* NuevoAnuncioViewController.swift */; };
+		83A3504C2B0268CC0023A084 /* NuevoAnuncioViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A3504B2B0268CC0023A084 /* NuevoAnuncioViewController.storyboard */; };
 		83A65A9D2ACF2F8500B585A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A65A9C2ACF2F8500B585A9 /* AppDelegate.swift */; };
 		83A65A9F2ACF2F8500B585A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A65A9E2ACF2F8500B585A9 /* SceneDelegate.swift */; };
 		83A65AA12ACF2F8500B585A9 /* InitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A65AA02ACF2F8500B585A9 /* InitViewController.swift */; };
@@ -43,11 +51,11 @@
 		83A65AA62ACF2F8600B585A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83A65AA52ACF2F8600B585A9 /* Assets.xcassets */; };
 		83A65AA92ACF2F8600B585A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83A65AA72ACF2F8600B585A9 /* LaunchScreen.storyboard */; };
 		83A9884E2AF566DD0021BCA5 /* AprobarUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9884D2AF566DD0021BCA5 /* AprobarUserViewController.swift */; };
+		83C6B5A62AFC368D007CDEF0 /* AjustesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C6B5A52AFC368D007CDEF0 /* AjustesViewController.storyboard */; };
+		83C6B5AA2AFC36B0007CDEF0 /* AjustesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6B5A92AFC36B0007CDEF0 /* AjustesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		831763CC2AF2BA33008627F4 /* DashboardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashboardViewController.xib; sourceTree = "<group>"; };
-		831763CE2AF2BA44008627F4 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		833A71CF2AEFFB1000AE3339 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		833A71D12AEFFD4700AE3339 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		833A71E42AF05A0D00AE3339 /* InicioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InicioViewController.swift; sourceTree = "<group>"; };
@@ -56,12 +64,22 @@
 		833A71EB2AF069A500AE3339 /* ConfirmacionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmacionViewController.swift; sourceTree = "<group>"; };
 		833A71ED2AF06D7900AE3339 /* LogInViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogInViewController.xib; sourceTree = "<group>"; };
 		833A71EF2AF06D8F00AE3339 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		839616DB2AFD1CF000D7D6E1 /* AnunciosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnunciosViewController.swift; sourceTree = "<group>"; };
+		839616DD2AFD1D4D00D7D6E1 /* AnunciosViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AnunciosViewController.storyboard; sourceTree = "<group>"; };
+		839616DF2AFD1D6900D7D6E1 /* AnuncioTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnuncioTableViewCell.swift; sourceTree = "<group>"; };
+		839616E02AFD1D6900D7D6E1 /* AnuncioTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnuncioTableViewCell.xib; sourceTree = "<group>"; };
+		839616E32AFD4C8600D7D6E1 /* DashboardViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DashboardViewController.storyboard; sourceTree = "<group>"; };
+		839616E52AFD4C9C00D7D6E1 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		8399B1492AF1B0E9006D68E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		839F3A692AFC0361002D48F9 /* MenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuViewController.storyboard; sourceTree = "<group>"; };
+		839F3A6B2AFC03BD002D48F9 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		83A3035D2AF99B3900744625 /* AprobarUserViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AprobarUserViewController.storyboard; sourceTree = "<group>"; };
 		83A3035F2AF9A70800744625 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		83A303602AF9A70800744625 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
 		83A303632AF9ACED00744625 /* RecuperarContrasenaViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecuperarContrasenaViewController.storyboard; sourceTree = "<group>"; };
 		83A303652AF9AD0100744625 /* RecuperarContraseñaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecuperarContraseñaViewController.swift"; sourceTree = "<group>"; };
+		83A350492B0268B70023A084 /* NuevoAnuncioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevoAnuncioViewController.swift; sourceTree = "<group>"; };
+		83A3504B2B0268CC0023A084 /* NuevoAnuncioViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NuevoAnuncioViewController.storyboard; sourceTree = "<group>"; };
 		83A65A992ACF2F8500B585A9 /* reto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83A65A9C2ACF2F8500B585A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83A65A9E2ACF2F8500B585A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +89,8 @@
 		83A65AA82ACF2F8600B585A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83A65AAA2ACF2F8600B585A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83A9884D2AF566DD0021BCA5 /* AprobarUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AprobarUserViewController.swift; sourceTree = "<group>"; };
+		83C6B5A52AFC368D007CDEF0 /* AjustesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AjustesViewController.storyboard; sourceTree = "<group>"; };
+		83C6B5A92AFC36B0007CDEF0 /* AjustesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjustesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,13 +148,20 @@
 				83A65A9E2ACF2F8500B585A9 /* SceneDelegate.swift */,
 				83A65AA02ACF2F8500B585A9 /* InitViewController.swift */,
 				833A71E42AF05A0D00AE3339 /* InicioViewController.swift */,
+				83C6B5A92AFC36B0007CDEF0 /* AjustesViewController.swift */,
 				833A71D12AEFFD4700AE3339 /* SignUpViewController.swift */,
 				833A71CF2AEFFB1000AE3339 /* LogInViewController.swift */,
 				833A71EB2AF069A500AE3339 /* ConfirmacionViewController.swift */,
 				83A9884D2AF566DD0021BCA5 /* AprobarUserViewController.swift */,
-				831763CE2AF2BA44008627F4 /* DashboardViewController.swift */,
+				839616DB2AFD1CF000D7D6E1 /* AnunciosViewController.swift */,
+				839F3A6B2AFC03BD002D48F9 /* MenuViewController.swift */,
 				83A303652AF9AD0100744625 /* RecuperarContraseñaViewController.swift */,
+				839616E52AFD4C9C00D7D6E1 /* DashboardViewController.swift */,
+				83A350492B0268B70023A084 /* NuevoAnuncioViewController.swift */,
 				83A3035D2AF99B3900744625 /* AprobarUserViewController.storyboard */,
+				839616DD2AFD1D4D00D7D6E1 /* AnunciosViewController.storyboard */,
+				83A3504B2B0268CC0023A084 /* NuevoAnuncioViewController.storyboard */,
+				83C6B5A52AFC368D007CDEF0 /* AjustesViewController.storyboard */,
 				83A65AA72ACF2F8600B585A9 /* LaunchScreen.storyboard */,
 				83A65AA22ACF2F8500B585A9 /* Main.storyboard */,
 				83A303632AF9ACED00744625 /* RecuperarContrasenaViewController.storyboard */,
@@ -142,9 +169,12 @@
 				833A71E82AF0697D00AE3339 /* ConfirmacionViewController.xib */,
 				833A71ED2AF06D7900AE3339 /* LogInViewController.xib */,
 				833A71EF2AF06D8F00AE3339 /* SignUpViewController.xib */,
-				831763CC2AF2BA33008627F4 /* DashboardViewController.xib */,
+				839F3A692AFC0361002D48F9 /* MenuViewController.storyboard */,
+				839616E32AFD4C8600D7D6E1 /* DashboardViewController.storyboard */,
 				83A3035F2AF9A70800744625 /* UserTableViewCell.swift */,
 				83A303602AF9A70800744625 /* UserTableViewCell.xib */,
+				839616DF2AFD1D6900D7D6E1 /* AnuncioTableViewCell.swift */,
+				839616E02AFD1D6900D7D6E1 /* AnuncioTableViewCell.xib */,
 				83A65AA52ACF2F8600B585A9 /* Assets.xcassets */,
 				83A65AAA2ACF2F8600B585A9 /* Info.plist */,
 				8399B1492AF1B0E9006D68E8 /* GoogleService-Info.plist */,
@@ -228,16 +258,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				839616E42AFD4C8600D7D6E1 /* DashboardViewController.storyboard in Resources */,
+				83C6B5A62AFC368D007CDEF0 /* AjustesViewController.storyboard in Resources */,
 				83A65AA92ACF2F8600B585A9 /* LaunchScreen.storyboard in Resources */,
 				83A303642AF9ACED00744625 /* RecuperarContrasenaViewController.storyboard in Resources */,
 				833A71E92AF0697D00AE3339 /* ConfirmacionViewController.xib in Resources */,
 				83A65AA62ACF2F8600B585A9 /* Assets.xcassets in Resources */,
 				83A303622AF9A70800744625 /* UserTableViewCell.xib in Resources */,
+				839616DE2AFD1D4D00D7D6E1 /* AnunciosViewController.storyboard in Resources */,
+				83A3504C2B0268CC0023A084 /* NuevoAnuncioViewController.storyboard in Resources */,
 				83A65AA42ACF2F8500B585A9 /* Main.storyboard in Resources */,
 				8399B14A2AF1B0E9006D68E8 /* GoogleService-Info.plist in Resources */,
+				839616E22AFD1D6900D7D6E1 /* AnuncioTableViewCell.xib in Resources */,
 				833A71E72AF0626F00AE3339 /* InicioViewController.xib in Resources */,
-				831763CD2AF2BA33008627F4 /* DashboardViewController.xib in Resources */,
 				833A71F02AF06D8F00AE3339 /* SignUpViewController.xib in Resources */,
+				839F3A6A2AFC0361002D48F9 /* MenuViewController.storyboard in Resources */,
 				833A71EE2AF06D7900AE3339 /* LogInViewController.xib in Resources */,
 				83A3035E2AF99B3900744625 /* AprobarUserViewController.storyboard in Resources */,
 			);
@@ -250,13 +285,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				839616E12AFD1D6900D7D6E1 /* AnuncioTableViewCell.swift in Sources */,
+				83C6B5AA2AFC36B0007CDEF0 /* AjustesViewController.swift in Sources */,
 				833A71D22AEFFD4700AE3339 /* SignUpViewController.swift in Sources */,
-				831763CF2AF2BA44008627F4 /* DashboardViewController.swift in Sources */,
 				83A303612AF9A70800744625 /* UserTableViewCell.swift in Sources */,
 				833A71E52AF05A0D00AE3339 /* InicioViewController.swift in Sources */,
 				833A71EC2AF069A500AE3339 /* ConfirmacionViewController.swift in Sources */,
 				833A71D02AEFFB1100AE3339 /* LogInViewController.swift in Sources */,
+				839616E62AFD4C9C00D7D6E1 /* DashboardViewController.swift in Sources */,
+				83A3504A2B0268B70023A084 /* NuevoAnuncioViewController.swift in Sources */,
 				83A303662AF9AD0100744625 /* RecuperarContraseñaViewController.swift in Sources */,
+				839616DC2AFD1CF000D7D6E1 /* AnunciosViewController.swift in Sources */,
+				839F3A6C2AFC03BD002D48F9 /* MenuViewController.swift in Sources */,
 				83A9884E2AF566DD0021BCA5 /* AprobarUserViewController.swift in Sources */,
 				83A65AA12ACF2F8500B585A9 /* InitViewController.swift in Sources */,
 				83A65A9D2ACF2F8500B585A9 /* AppDelegate.swift in Sources */,

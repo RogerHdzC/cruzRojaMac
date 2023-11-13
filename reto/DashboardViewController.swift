@@ -2,17 +2,14 @@
 //  DashboardViewController.swift
 //  reto
 //
-//  Created by Administrador on 01/11/23.
+//  Created by Administrador on 09/11/23.
 //
+
+import Foundation
 import UIKit
-import FirebaseAnalytics
 
-
-class DashboardViewController: UIViewController {
+class DashboardViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Analytics Event
-        Analytics.logEvent("InitScreen", parameters: ["message": "Integración de Firebase completa"])
     }
 }

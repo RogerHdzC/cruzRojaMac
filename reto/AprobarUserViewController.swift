@@ -23,8 +23,6 @@ class AprobarUserViewController: UIViewController{
     
     @IBOutlet weak var tableView: UITableView!
     
-    var strings: [String] = ["Alpha", "Beta", "Unlimited", "Revised"]
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

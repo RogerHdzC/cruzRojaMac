@@ -48,7 +48,7 @@ class SignUpViewController: UIViewController {
                 if password == repassword {
                     Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                         
-                        if let error = error {
+                        if error != nil {
                             let alertController = UIAlertController(title: "Error", message: "Se ha producido un error registrando el usuario", preferredStyle: .alert)
                             alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
                             
@@ -63,7 +63,7 @@ class SignUpViewController: UIViewController {
                             ]
                             
                             self.db.collection("users").document(uid).setData(userData) { error in
-                                if let error = error {
+                                if error != nil {
                                     let alertController = UIAlertController(title: "Error", message: "Error al guardar los datos", preferredStyle: .alert)
                                     alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
                                     

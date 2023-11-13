@@ -39,7 +39,7 @@ class LogInViewController: UIViewController {
             Auth.auth().signIn(withEmail: email, password: password) { [weak self] (authResult, error) in
                 guard let self = self else {return}
                 
-                if let error = error {
+                if error != nil {
                         
                     let alertController = UIAlertController(title: "Error", message: "Credenciales inválidas o usuario no aprobado", preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
@@ -66,8 +66,10 @@ class LogInViewController: UIViewController {
                                     if let userRole = rolData["id"] as? String {
                                         if userRole == "admin" {
                                             if userState == "aprobado" {
+                                                let storyboard = UIStoryboard(name: "MenuViewController", bundle: nil)
+                                                let vc = storyboard.instantiateViewController(withIdentifier: "MenuViewController")
                                                 
-                                                self.navigationController?.pushViewController(InicioViewController(email: email, provider: ProviderType.basic), animated: true)
+                                                self.navigationController?.pushViewController(vc, animated: true)
                                             } else {
                                                 let alertController = UIAlertController(title: "Error", message: "Aún no has sido aprobado", preferredStyle: .alert)
                                                 alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
