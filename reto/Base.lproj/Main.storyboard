@@ -57,12 +57,24 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDI-gf-7U6">
+                                <rect key="frame" x="67" y="640" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="ajustes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yll-Ac-NZU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mDI-gf-7U6" secondAttribute="bottom" constant="143" id="0Hf-g6-8Sy"/>
                             <constraint firstItem="4vu-49-Ysm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KjX-Sx-PRd"/>
+                            <constraint firstItem="mDI-gf-7U6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="O18-uS-fKL"/>
+                            <constraint firstItem="mDI-gf-7U6" firstAttribute="top" secondItem="Aam-iJ-f5w" secondAttribute="top" id="W42-hJ-6GL"/>
                             <constraint firstItem="4vu-49-Ysm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uO2-4z-pTh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mDI-gf-7U6" secondAttribute="trailing" constant="251" id="xn2-Oy-UhV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jt3-NS-kjk"/>

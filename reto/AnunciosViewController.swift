@@ -10,11 +10,12 @@ import UIKit
 import FirebaseFirestore
 
 struct Anuncios{
+    let author: String
     let descripcion: String
     let fecha: Date
-    let hrsMax: String
+    let hrsMax: Int
     let imagen: String
-    let tipo: Int
+    let tipo: Bool
     let titulo: String
     let documentRef: DocumentReference
 }
@@ -36,17 +37,19 @@ class AnunciosViewController: UIViewController{
                 print("Error fetching documents: \(error)")
             } else {
                 for document in querySnapshot!.documents {
+                    
                     let data = document.data()
+                    let author = data["author"] as? String
                     let titulo = data["titulo"] as! String
                     var fecha: Date?
                     if let timestamp = data["fecha"] as? Timestamp {
                         let fecha = timestamp.dateValue()
                     }
-                    let hrsMax = data["hrsMax"] as? String
+                    let hrsMax = data["hrsMax"] as? Int
                     let imagen = data["imagen"] as! String
-                    let tipo = data["tipo"] as! Int
+                    let tipo = data["tipo"] as! Bool
                     let descripcion = data["descripcion"] as! String
-                    let anuncio = Anuncios(descripcion: descripcion, fecha: fecha ?? Date(), hrsMax: hrsMax ?? "", imagen: imagen, tipo: tipo, titulo: titulo, documentRef: document.reference)
+                    let anuncio = Anuncios(author: author ?? "", descripcion: descripcion, fecha: fecha ?? Date(), hrsMax: hrsMax ?? 0, imagen: imagen, tipo: tipo, titulo: titulo, documentRef: document.reference)
                     self.listasAnuncios.append(anuncio)
                 }
                 self.tableView.reloadData()
@@ -71,7 +74,12 @@ extension AnunciosViewController : UITableViewDataSource, UITableViewDelegate {
 
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let anuncioSeleccionado = listasAnuncios[indexPath.row]
+        let storyboard = UIStoryboard(name: "DetallesAnuncioViewController", bundle: nil) // Reemplaza "Main" con el nombre de tu storyboard
+        if let detalleVC = storyboard.instantiateViewController(withIdentifier: "DetallesAnuncioViewController") as? DetallesAnuncioViewController {
+            detalleVC.anuncioSeleccionado = anuncioSeleccionado
+            self.navigationController?.pushViewController(detalleVC, animated: true)
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -94,6 +102,7 @@ extension AnunciosViewController : UITableViewDataSource, UITableViewDelegate {
     func deleteAction(anuncioReference: DocumentReference) {
         db.document(anuncioReference.path).delete { (error) in
             if let error = error {
+                print("Error: \(error)")
                 let alertController = UIAlertController(title: "Error", message: "Error al eliminar el anuncio", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
                 

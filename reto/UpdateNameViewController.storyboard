@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre de usuario" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGc-aN-tKc">
+                                <rect key="frame" x="36" y="145" width="219" height="97"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="textColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre de Usuario" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJS-JR-oKa">
+                                <rect key="frame" x="41" y="316" width="164" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="0.27843135600000002" green="0.27843135600000002" blue="0.27843135600000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="AdminName" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lsK-Sn-CeV">
+                                <rect key="frame" x="37" y="356" width="318" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Bq-2y-3ba">
+                                <rect key="frame" x="46" y="711" width="300" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" strokeWidth="300">
+                                        <color key="backgroundColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Guardar">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="0.73086123430000005" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="kJS-JR-oKa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="41" id="3an-YE-Q6m"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="MGc-aN-tKc" secondAttribute="bottom" constant="576" id="4ES-Yn-KoP"/>
+                            <constraint firstItem="1Bq-2y-3ba" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="46" id="5Vl-wp-9mM"/>
+                            <constraint firstItem="lsK-Sn-CeV" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="297" id="7L3-kG-Yjg"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="1Bq-2y-3ba" secondAttribute="trailing" constant="47" id="JJg-C9-UUH"/>
+                            <constraint firstItem="1Bq-2y-3ba" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="K0T-5l-mUp"/>
+                            <constraint firstItem="kJS-JR-oKa" firstAttribute="top" secondItem="MGc-aN-tKc" secondAttribute="bottom" constant="74" id="NNc-Ez-vqc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="MGc-aN-tKc" secondAttribute="trailing" constant="138" id="PGF-2V-0et"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="lsK-Sn-CeV" secondAttribute="trailing" constant="38" id="Qru-oI-wug"/>
+                            <constraint firstItem="MGc-aN-tKc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="36" id="S1u-oV-bRX"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="kJS-JR-oKa" secondAttribute="bottom" constant="479" id="Zuk-6B-9wW"/>
+                            <constraint firstItem="MGc-aN-tKc" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="86" id="cxD-gb-JpL"/>
+                            <constraint firstItem="lsK-Sn-CeV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="37" id="hDT-0G-DtQ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="lsK-Sn-CeV" secondAttribute="bottom" constant="428" id="uH7-8a-E0n"/>
+                            <constraint firstItem="1Bq-2y-3ba" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="652" id="w16-56-SAW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+</document>

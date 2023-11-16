@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo Electronico" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TgW-OR-mU5">
+                                <rect key="frame" x="28" y="137" width="242" height="108"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="108" id="NcC-PQ-FxJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="textColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo Electronico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sNG-0b-Sbm">
+                                <rect key="frame" x="28" y="289" width="157.33333333333334" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="0.27843135600000002" green="0.27843135600000002" blue="0.27843135600000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="adminMail@gmail.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wwg-wL-2Mv">
+                                <rect key="frame" x="28" y="328" width="319" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcs-bd-U75">
+                                <rect key="frame" x="46" y="710" width="301" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" strokeWidth="300">
+                                        <color key="backgroundColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Guardar">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Wwg-wL-2Mv" firstAttribute="leading" secondItem="sNG-0b-Sbm" secondAttribute="leading" id="4ni-mF-PQ9"/>
+                            <constraint firstItem="Wwg-wL-2Mv" firstAttribute="top" secondItem="sNG-0b-Sbm" secondAttribute="bottom" constant="16" id="8h2-YX-YVZ"/>
+                            <constraint firstItem="wcs-bd-U75" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="46" id="98Q-z2-gXF"/>
+                            <constraint firstItem="TgW-OR-mU5" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="78" id="9dX-r3-868"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="TgW-OR-mU5" secondAttribute="trailing" constant="123" id="B80-oi-czq"/>
+                            <constraint firstItem="wcs-bd-U75" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="FL8-bC-xWQ"/>
+                            <constraint firstItem="sNG-0b-Sbm" firstAttribute="top" secondItem="TgW-OR-mU5" secondAttribute="bottom" constant="44" id="OS3-DC-nsD"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="wcs-bd-U75" secondAttribute="bottom" constant="73" id="ekn-an-dmF"/>
+                            <constraint firstItem="TgW-OR-mU5" firstAttribute="leading" secondItem="sNG-0b-Sbm" secondAttribute="leading" id="qKT-SN-nzx"/>
+                            <constraint firstItem="TgW-OR-mU5" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="28" id="vDV-Bf-KZj"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
+        </scene>
+    </scenes>
+</document>

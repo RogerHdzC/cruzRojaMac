@@ -35,6 +35,13 @@ class InitViewController: UIViewController {
         
         navigationController?.pushViewController(vc, animated: true)
     }
+    @IBAction func ajustes(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "MenuViewController", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "MenuViewController")
+        
+        navigationController?.pushViewController(vc, animated: true)
+        
+    }
     
 }
 

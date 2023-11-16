@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Foto de Perfil" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tNw-i8-34g">
+                                <rect key="frame" x="35.999999999999986" y="162" width="242.66666666666663" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="textColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="perfill" translatesAutoresizingMaskIntoConstraints="NO" id="qPW-EW-J0l">
+                                <rect key="frame" x="96" y="326" width="201" height="200"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odY-OC-74i">
+                                <rect key="frame" x="46" y="710" width="301" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" strokeWidth="300">
+                                        <color key="backgroundColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Guardar">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                                <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Actualiza foto de Perfil" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LIi-4c-rX0">
+                                <rect key="frame" x="38.333333333333329" y="235.33333333333334" width="171.33333333333337" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.27843135600000002" green="0.27843135600000002" blue="0.27843135600000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="0.68252836319999999" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="LIi-4c-rX0" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-180.5" id="2A4-0I-nkG"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="qPW-EW-J0l" secondAttribute="bottom" constant="292" id="2fe-cH-OAB"/>
+                            <constraint firstItem="qPW-EW-J0l" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="GQd-uO-9cO"/>
+                            <constraint firstItem="tNw-i8-34g" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="103" id="Gis-0p-r5e"/>
+                            <constraint firstItem="LIi-4c-rX0" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" constant="-72.5" id="QXS-Dq-SKp"/>
+                            <constraint firstItem="odY-OC-74i" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="46" id="R9f-0q-kcg"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="odY-OC-74i" secondAttribute="bottom" constant="73" id="Zhw-Ip-0Rg"/>
+                            <constraint firstItem="odY-OC-74i" firstAttribute="centerX" secondItem="qPW-EW-J0l" secondAttribute="centerX" id="ax2-oR-nOG"/>
+                            <constraint firstItem="qPW-EW-J0l" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="lqn-eA-iF1"/>
+                            <constraint firstItem="tNw-i8-34g" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35.999999999999986" id="tu6-q0-PD3"/>
+                            <constraint firstItem="qPW-EW-J0l" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="96" id="z50-9p-OLp"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-19.083969465648853" y="-28.169014084507044"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="perfill" width="48" height="48"/>
+    </resources>
+</document>

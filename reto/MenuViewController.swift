@@ -37,4 +37,13 @@ class MenuViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    
+    @IBAction func serivicioAction(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "AprobarHorasViewController", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "AprobarHorasViewController")
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
 }

@@ -15,16 +15,128 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Bienvenido Ajustes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDl-mo-Kmu">
-                                <rect key="frame" x="53" y="135" width="286" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="262" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="yeQ-3K-bSA">
+                                <rect key="frame" x="34" y="462" width="333.33333333333331" height="283"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKG-Yj-hRN">
+                                        <rect key="frame" x="0.0" y="0.0" width="333.33333333333331" height="47"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="flechita" imagePlacement="trailing" imagePadding="122" titleAlignment="leading">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Nombre de usuario">
+                                                    <attributes>
+                                                        <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
+                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseBackgroundColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cr-1G-dOi">
+                                        <rect key="frame" x="0.0" y="59" width="333.33333333333331" height="47"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="flechita" imagePlacement="trailing" imagePadding="166" titleAlignment="leading">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Foto de Perfil">
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseBackgroundColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PeS-PP-9mq">
+                                        <rect key="frame" x="0.0" y="118" width="333.33333333333331" height="47"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="flechita" imagePlacement="trailing" imagePadding="132" titleAlignment="leading">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Correo Electrónico">
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseBackgroundColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Jq-ww-3ib">
+                                        <rect key="frame" x="0.0" y="177" width="333.33333333333331" height="47"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="flechita" imagePlacement="trailing" imagePadding="181" titleAlignment="leading">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Contraseña">
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseBackgroundColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8O-DF-gDE">
+                                        <rect key="frame" x="0.0" y="236" width="333.33333333333331" height="47"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="flechita" imagePlacement="trailing" imagePadding="97" titleAlignment="leading">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="Aprobar Nuevo Usuario">
+                                                    <attributes>
+                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseBackgroundColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="perfill" translatesAutoresizingMaskIntoConstraints="NO" id="NYd-td-Ven">
+                                <rect key="frame" x="121" y="222" width="151" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="oW5-hI-7mM"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajustes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDl-mo-Kmu">
+                                <rect key="frame" x="35" y="123" width="208" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="208" id="bNa-7F-YGU"/>
+                                    <constraint firstAttribute="height" constant="48" id="pLr-49-oFv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <color key="textColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AdminName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gH-oN-XeD">
+                                <rect key="frame" x="119" y="399" width="155" height="32.333333333333314"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NDl-mo-Kmu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="5f7-Kq-eTr"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NDl-mo-Kmu" secondAttribute="trailing" constant="150" id="JYR-9c-nJ3"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yeQ-3K-bSA" secondAttribute="trailing" constant="25.666666666666686" id="QHg-JK-t9N"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="NDl-mo-Kmu" secondAttribute="bottom" constant="647" id="VDA-Zn-hCb"/>
+                            <constraint firstItem="NYd-td-Ven" firstAttribute="centerX" secondItem="0gH-oN-XeD" secondAttribute="centerX" id="YXc-mB-Brs"/>
+                            <constraint firstItem="NYd-td-Ven" firstAttribute="top" secondItem="NDl-mo-Kmu" secondAttribute="bottom" constant="51" id="d2h-YJ-IhV"/>
+                            <constraint firstItem="0gH-oN-XeD" firstAttribute="top" secondItem="NYd-td-Ven" secondAttribute="bottom" constant="27" id="eJu-UK-ymW"/>
+                            <constraint firstItem="NYd-td-Ven" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="121" id="gCf-w3-pMr"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="yeQ-3K-bSA" secondAttribute="bottom" constant="73" id="tMK-2b-qk9"/>
+                            <constraint firstItem="NDl-mo-Kmu" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="64" id="wIe-Vt-UjB"/>
+                            <constraint firstItem="0gH-oN-XeD" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="zLt-ll-WMm"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="view" destination="5EZ-qb-Rvc" id="NXw-r8-wKl"/>
@@ -32,7 +144,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="-34"/>
+            <point key="canvasLocation" x="130.53435114503816" y="-34.507042253521128"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="flechita" width="33" height="33"/>
+        <image name="perfill" width="48" height="48"/>
+    </resources>
 </document>

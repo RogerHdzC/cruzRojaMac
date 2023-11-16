@@ -62,8 +62,11 @@
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
-                                                    <backgroundConfiguration key="background" image="dashboardmp"/>
+                                                    <backgroundConfiguration key="background" image="serviciosocialmp"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="serivicioAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7rr-Nm-hIe"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5IH-yM-v9o">
                                                 <rect key="frame" x="158" y="0.0" width="138" height="138"/>
@@ -141,5 +144,6 @@
         <image name="ajustesmp" width="713" height="672"/>
         <image name="anunciomp" width="646" height="610"/>
         <image name="dashboardmp" width="512" height="477"/>
+        <image name="serviciosocialmp" width="797" height="751"/>
     </resources>
 </document>
