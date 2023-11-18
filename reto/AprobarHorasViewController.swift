@@ -41,8 +41,12 @@ class AprobarHorasViewController : UIViewController {
                     let data = document.data()
                     let aprobadas = data["aprobadas"] as! String
                     let evento = data["evento"] as! DocumentReference
-                    evento.getDocument{ (evetoDoc, error) in
-                        
+                    evento.getDocument{ (eventoDoc, error) in
+                        let eventoData = eventoDoc!.data()
+                    }
+                    let idVoluntario = data["idVoluntario"] as! DocumentReference
+                    idVoluntario.getDocument{ (voluntario, error) in
+                        let voluntarioData = voluntario!.data()
                     }
                 }
             }
@@ -61,6 +65,14 @@ extension AprobarHorasViewController : UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let horasCell = tableView.dequeueReusableCell(withIdentifier: AprobarHorasTableViewCell.identifier, for: indexPath) as! AprobarHorasTableViewCell
+        let horas = listasHoras[indexPath.row]
+        
+        horasCell.nameLabel.text = "Test"
+        horasCell.eventoLabel.text = "Test"
+        horasCell.idLabel.text = "test"
+        horasCell.hrsLabel.text="0"
+        
+        
         return horasCell
     }
     

@@ -13,6 +13,7 @@ struct Anuncios{
     let author: String
     let descripcion: String
     let fecha: Date
+    let fechaEvento: String
     let hrsMax: Int
     let imagen: String
     let tipo: Bool
@@ -45,11 +46,12 @@ class AnunciosViewController: UIViewController{
                     if let timestamp = data["fecha"] as? Timestamp {
                         let fecha = timestamp.dateValue()
                     }
+                    let fechaEvento = data["fechaEvento"] as? String
                     let hrsMax = data["hrsMax"] as? Int
                     let imagen = data["imagen"] as! String
                     let tipo = data["tipo"] as! Bool
                     let descripcion = data["descripcion"] as! String
-                    let anuncio = Anuncios(author: author ?? "", descripcion: descripcion, fecha: fecha ?? Date(), hrsMax: hrsMax ?? 0, imagen: imagen, tipo: tipo, titulo: titulo, documentRef: document.reference)
+                    let anuncio = Anuncios(author: author ?? "", descripcion: descripcion, fecha: fecha ?? Date(), fechaEvento: fechaEvento ?? "", hrsMax: hrsMax ?? 0, imagen: imagen, tipo: tipo, titulo: titulo, documentRef: document.reference)
                     self.listasAnuncios.append(anuncio)
                 }
                 self.tableView.reloadData()

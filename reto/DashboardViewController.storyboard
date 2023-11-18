@@ -17,36 +17,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="hFu-sU-HHo">
-                                <rect key="frame" x="44" y="93" width="315" height="725"/>
+                                <rect key="frame" x="44" y="93" width="315" height="748.33333333333337"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="rHc-3o-ha3">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="130"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="153.33333333333334"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenido al dashboard, Admin" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPg-S1-o15">
-                                                <rect key="frame" x="0.0" y="0.0" width="161" height="93"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dashboard" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPg-S1-o15">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="80"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="93" id="7Rq-cs-g3c"/>
-                                                    <constraint firstAttribute="width" constant="161" id="HIK-E5-aHK"/>
+                                                    <constraint firstAttribute="height" constant="80" id="7Rq-cs-g3c"/>
+                                                    <constraint firstAttribute="width" constant="300" id="HIK-E5-aHK"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                                 <color key="textColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lista de Voluntarios" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRc-JX-n7g">
+                                                <rect key="frame" x="0.0" y="96" width="149.33333333333334" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Nombre                   ID                      Horas  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nG4-Ja-Fxo">
-                                                <rect key="frame" x="0.0" y="109" width="314" height="21"/>
-                                                <color key="backgroundColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <rect key="frame" x="0.0" y="132.33333333333334" width="314" height="21"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="YfN-6j-CsZ"/>
                                                     <constraint firstAttribute="width" constant="314" id="muQ-aD-qxS"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" red="1" green="0.0187217119" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Hu5-m4-WlG">
-                                        <rect key="frame" x="0.0" y="158" width="315" height="567"/>
+                                        <rect key="frame" x="0.0" y="181.33333333333331" width="315" height="567"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="315" id="2p2-ej-tk0"/>

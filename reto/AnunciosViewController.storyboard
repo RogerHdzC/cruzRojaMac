@@ -16,18 +16,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenido al Creador de Anuncios, Admin" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qz5-ns-OBc">
-                                <rect key="frame" x="34" y="107" width="245" height="123"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anuncios" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qz5-ns-OBc">
+                                <rect key="frame" x="16" y="59" width="245" height="87"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="123" id="Nfv-kn-PSL"/>
-                                    <constraint firstAttribute="width" constant="245" id="gkB-5Z-JOM"/>
+                                    <constraint firstAttribute="height" constant="87" id="d64-dT-mVB"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <color key="textColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ejN-fG-2cK">
-                                <rect key="frame" x="0.0" y="238" width="393" height="523"/>
+                                <rect key="frame" x="0.0" y="205" width="393" height="511"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="anuncioCell" id="EMq-9T-gGH">
@@ -41,10 +40,10 @@
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XaF-G0-vuS">
-                                <rect key="frame" x="117" y="769" width="158.33333333333337" height="68.666666666666629"/>
+                                <rect key="frame" x="118" y="752.33333333333337" width="157" height="65.666666666666629"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ErU-kZ-oyz">
-                                        <rect key="frame" x="62" y="0.0" width="34.333333333333343" height="34.333333333333336"/>
+                                        <rect key="frame" x="61.333333333333343" y="0.0" width="34.333333333333343" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="+">
                                             <color key="baseForegroundColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -54,9 +53,17 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAS-rv-eSN">
-                                        <rect key="frame" x="0.0" y="34.333333333333371" width="158.33333333333334" height="34.333333333333343"/>
+                                        <rect key="frame" x="4" y="34.333333333333258" width="149.33333333333334" height="31.333333333333329"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="CREAR ANUNCIO">
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="CREAR ANUNCIO">
+                                                    <attributes>
+                                                        <font key="NSFont" size="15" name="Helvetica"/>
+                                                        <font key="NSOriginalFont" size="12" name="Helvetica"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                             <color key="baseForegroundColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
@@ -65,19 +72,28 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lista de Anuncios" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBQ-6t-dNb">
+                                <rect key="frame" x="16" y="162" width="134.66666666666669" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="XaF-G0-vuS" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" constant="19.666666666666629" id="4sU-RS-awi"/>
-                            <constraint firstItem="Qz5-ns-OBc" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="34" id="534-64-q3P"/>
-                            <constraint firstItem="ejN-fG-2cK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="LpD-0i-I8N"/>
-                            <constraint firstItem="ejN-fG-2cK" firstAttribute="top" secondItem="Qz5-ns-OBc" secondAttribute="bottom" constant="8" id="d08-Tk-gVG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Qz5-ns-OBc" secondAttribute="trailing" constant="98" id="dwU-5a-tZi"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ejN-fG-2cK" secondAttribute="bottom" constant="57" id="i8s-uU-LuU"/>
-                            <constraint firstItem="Qz5-ns-OBc" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="topMargin" constant="48" id="qR5-1f-LLo"/>
-                            <constraint firstItem="ejN-fG-2cK" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="tHr-AW-W7H"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="XaF-G0-vuS" secondAttribute="trailing" constant="117.66666666666663" id="y0x-zC-nIc"/>
+                            <constraint firstItem="ejN-fG-2cK" firstAttribute="top" secondItem="LBQ-6t-dNb" secondAttribute="bottom" constant="22.666666666666657" id="325-b5-Blt"/>
+                            <constraint firstItem="XaF-G0-vuS" firstAttribute="top" secondItem="ejN-fG-2cK" secondAttribute="bottom" constant="36.333333333333485" id="6jW-ml-SBZ"/>
+                            <constraint firstItem="ejN-fG-2cK" firstAttribute="centerX" secondItem="XaF-G0-vuS" secondAttribute="centerX" id="EeO-IW-KVa"/>
+                            <constraint firstItem="Qz5-ns-OBc" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leadingMargin" id="KVf-wc-D54"/>
+                            <constraint firstItem="ejN-fG-2cK" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Sox-Xd-ibr"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Qz5-ns-OBc" secondAttribute="trailing" constant="132" id="Y8L-hp-Dm8"/>
+                            <constraint firstItem="XaF-G0-vuS" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="118" id="ZMu-OS-dPD"/>
+                            <constraint firstItem="LBQ-6t-dNb" firstAttribute="top" secondItem="Qz5-ns-OBc" secondAttribute="bottom" constant="16" id="b4p-h6-kpW"/>
+                            <constraint firstItem="LBQ-6t-dNb" firstAttribute="leading" secondItem="Qz5-ns-OBc" secondAttribute="leading" id="d3g-6r-di5"/>
+                            <constraint firstItem="ejN-fG-2cK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="dNg-T6-mgu"/>
+                            <constraint firstItem="XaF-G0-vuS" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="k9y-DU-hbV"/>
+                            <constraint firstItem="Qz5-ns-OBc" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="mZ9-QU-hhZ"/>
                         </constraints>
                     </view>
                     <connections>

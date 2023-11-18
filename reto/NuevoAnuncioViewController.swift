@@ -21,6 +21,7 @@ class NuevoAnuncioViewController : UIViewController, UIImagePickerControllerDele
     @IBOutlet weak var descripcion: UITextField!
     @IBOutlet weak var date: UIDatePicker!
     @IBOutlet weak var horasLabel: UILabel!
+    @IBOutlet weak var fechaLabel: UILabel!
     
     private let storage = Storage.storage().reference()
     
@@ -126,17 +127,22 @@ class NuevoAnuncioViewController : UIViewController, UIImagePickerControllerDele
         print("URL recuperada desde UserDefaults: \(imageUrlString)")
         _ = URL(string: imageUrlString)
         let currentDate = date.date
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let fechaEvento = dateFormatter.string(from: currentDate)
         let isEvent = esEvento.isOn
         let docId = UUID().uuidString
+        let fechaCreacion = Date()
         
         let anuncioData = [
             "author":author,
             "descripcion": description,
-            "fecha":currentDate,
+            "fechaEvento":fechaEvento,
             "hrsMax":hrsMax,
             "imagen":imageUrlString,
             "tipo":isEvent,
-            "titulo":title
+            "titulo":title,
+            "fecha":fechaCreacion
             
         ] as [String : Any]
         
@@ -160,10 +166,14 @@ class NuevoAnuncioViewController : UIViewController, UIImagePickerControllerDele
                 // Si el interruptor está encendido (es un evento), muestra el label y el campo de horas máximas
                 horasLabel.isHidden = false
                 horasMax.isHidden = false
+                fechaLabel.isHidden = false
+                date.isHidden = false
             } else {
                 // Si el interruptor está apagado (no es un evento), oculta el label y el campo de horas máximas
                 horasLabel.isHidden = true
                 horasMax.isHidden = true
+                fechaLabel.isHidden = true
+                date.isHidden = true
             }
     }
 }

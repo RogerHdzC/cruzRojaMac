@@ -32,6 +32,10 @@
                                             </attributedString>
                                             <color key="baseBackgroundColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="updatename:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="W0b-eF-bYI"/>
+                                            <action selector="updatenameAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="S57-QH-Cgl"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cr-1G-dOi">
                                         <rect key="frame" x="0.0" y="59" width="333.33333333333331" height="47"/>
@@ -40,14 +44,17 @@
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Foto de Perfil">
                                                     <attributes>
-                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
-                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
                                                 </fragment>
                                             </attributedString>
                                             <color key="baseBackgroundColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="updatephoto:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ghb-SU-n46"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PeS-PP-9mq">
                                         <rect key="frame" x="0.0" y="118" width="333.33333333333331" height="47"/>
@@ -56,7 +63,7 @@
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Correo Electrónico">
                                                     <attributes>
-                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
@@ -64,6 +71,9 @@
                                             </attributedString>
                                             <color key="baseBackgroundColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="updateemailAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="bx7-Lr-l3U"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Jq-ww-3ib">
                                         <rect key="frame" x="0.0" y="177" width="333.33333333333331" height="47"/>
@@ -72,7 +82,7 @@
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Contraseña">
                                                     <attributes>
-                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
@@ -80,6 +90,9 @@
                                             </attributedString>
                                             <color key="baseBackgroundColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="updatepasswordAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="OBK-78-NVn"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8O-DF-gDE">
                                         <rect key="frame" x="0.0" y="236" width="333.33333333333331" height="47"/>
@@ -88,7 +101,7 @@
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Aprobar Nuevo Usuario">
                                                     <attributes>
-                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <font key="NSFont" size="16" name="HelveticaNeue-Bold"/>
                                                         <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                     </attributes>
@@ -99,43 +112,41 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="perfill" translatesAutoresizingMaskIntoConstraints="NO" id="NYd-td-Ven">
-                                <rect key="frame" x="121" y="222" width="151" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="oW5-hI-7mM"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajustes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDl-mo-Kmu">
-                                <rect key="frame" x="35" y="123" width="208" height="48"/>
+                                <rect key="frame" x="34" y="83" width="163" height="69"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="208" id="bNa-7F-YGU"/>
-                                    <constraint firstAttribute="height" constant="48" id="pLr-49-oFv"/>
+                                    <constraint firstAttribute="height" constant="69" id="nTx-JX-TG4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                 <color key="textColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AdminName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gH-oN-XeD">
-                                <rect key="frame" x="119" y="399" width="155" height="32.333333333333314"/>
+                                <rect key="frame" x="119" y="372" width="155" height="32.333333333333314"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="perfill" translatesAutoresizingMaskIntoConstraints="NO" id="vSi-qZ-RjT">
+                                <rect key="frame" x="121" y="189" width="151" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="ZjY-g3-oyH"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="NDl-mo-Kmu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="35" id="5f7-Kq-eTr"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NDl-mo-Kmu" secondAttribute="trailing" constant="150" id="JYR-9c-nJ3"/>
+                            <constraint firstItem="NDl-mo-Kmu" firstAttribute="leading" secondItem="yeQ-3K-bSA" secondAttribute="leading" id="08e-8b-gdx"/>
+                            <constraint firstItem="0gH-oN-XeD" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="372" id="Ixx-mi-P44"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yeQ-3K-bSA" secondAttribute="trailing" constant="25.666666666666686" id="QHg-JK-t9N"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="NDl-mo-Kmu" secondAttribute="bottom" constant="647" id="VDA-Zn-hCb"/>
-                            <constraint firstItem="NYd-td-Ven" firstAttribute="centerX" secondItem="0gH-oN-XeD" secondAttribute="centerX" id="YXc-mB-Brs"/>
-                            <constraint firstItem="NYd-td-Ven" firstAttribute="top" secondItem="NDl-mo-Kmu" secondAttribute="bottom" constant="51" id="d2h-YJ-IhV"/>
-                            <constraint firstItem="0gH-oN-XeD" firstAttribute="top" secondItem="NYd-td-Ven" secondAttribute="bottom" constant="27" id="eJu-UK-ymW"/>
-                            <constraint firstItem="NYd-td-Ven" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="121" id="gCf-w3-pMr"/>
+                            <constraint firstItem="vSi-qZ-RjT" firstAttribute="top" secondItem="NDl-mo-Kmu" secondAttribute="bottom" constant="37" id="Uol-YQ-2TC"/>
+                            <constraint firstItem="NDl-mo-Kmu" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="gFs-rZ-Lme"/>
+                            <constraint firstItem="vSi-qZ-RjT" firstAttribute="centerX" secondItem="0gH-oN-XeD" secondAttribute="centerX" id="gab-wr-uSu"/>
+                            <constraint firstItem="0gH-oN-XeD" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="lXb-zX-TMh"/>
+                            <constraint firstItem="vSi-qZ-RjT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="121" id="mVR-qf-vkj"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="yeQ-3K-bSA" secondAttribute="bottom" constant="73" id="tMK-2b-qk9"/>
-                            <constraint firstItem="NDl-mo-Kmu" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="64" id="wIe-Vt-UjB"/>
-                            <constraint firstItem="0gH-oN-XeD" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="zLt-ll-WMm"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NDl-mo-Kmu" secondAttribute="trailing" constant="196" id="yUX-VL-zJB"/>
                         </constraints>
                     </view>
                     <connections>

@@ -19,6 +19,8 @@ class DetallesAnuncioViewController : UIViewController {
     @IBOutlet weak var horasMaxLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var horMaxNoEditLabel: UILabel!
+    @IBOutlet weak var fechaEventoEdit: UILabel!
+    @IBOutlet weak var fechaEventoLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,16 +31,23 @@ class DetallesAnuncioViewController : UIViewController {
         
         tituloLabel.text = anuncio.titulo
         descriptionLabel.text = anuncio.descripcion
-        fechaLabel.text = "\(anuncio.fecha)"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss" // Puedes ajustar el formato según tus necesidades
+        let fechaCreacion = dateFormatter.string(from: anuncio.fecha)
+        fechaLabel.text = fechaCreacion
         if anuncio.tipo {
             eventoLabel.text = "Es un envento"
             horMaxNoEditLabel.isHidden = false
             horasMaxLabel.isHidden = false
             horasMaxLabel.text = "\(anuncio.hrsMax)"
+            fechaEventoLabel.isHidden = false
+            fechaEventoEdit.text = anuncio.fechaEvento
         } else{
             eventoLabel.text = "No es un evento"
             horMaxNoEditLabel.isHidden = true
             horasMaxLabel.isHidden = true
+            fechaEventoEdit.isHidden = true
+            fechaEventoLabel.isHidden = true
         }
         
         if let imageUrl = URL(string: anuncio.imagen) {
