@@ -41,5 +41,12 @@ class AjustesViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    
+    @IBAction func aprobarAction(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "AprobarUserViewController", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "AprobarUserViewController")
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 

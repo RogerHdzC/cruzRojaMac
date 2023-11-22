@@ -1,78 +1,30 @@
 //
-//  AprobarHorasViewController.swift
+//  DetallesAprobarHorasViewController.swift
 //  reto
 //
-//  Created by Administrador on 16/11/23.
+//  Created by Administrador on 22/11/23.
 //
 
 import Foundation
 import UIKit
 import FirebaseFirestore
 
-struct horasVoluntarios {
-    let aprobadas: Bool
-    let estatus: String
-    let evento: String
-    let evidencia: String
-    let hrs: Int
-    let idVoluntario: String
-    let horasRef: DocumentReference
-
-}
-
-class AprobarHorasViewController : UIViewController {
+class DetallesAprobarHorasViewController : UIViewController {
     let db = Firestore.firestore()
-    var listasHoras: [horasVoluntarios] = []
-    @IBOutlet weak var tableView: UITableView!
+    var horaSeleccionado: horasVoluntarios?
+    
+    @IBOutlet weak var nombreVoluntario: UILabel!
+    @IBOutlet weak var idVoluntario: UILabel!
+    @IBOutlet weak var nombreEvento: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var horasAprobar: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let horasCollection = db.collection("horasVoluntarios")
-        
-        horasCollection.whereField("aprobadas", isEqualTo: false).getDocuments{ [weak self] (querySnapshot, error)
-            in guard let self = self else { return }
-            
-            if let error = error {
-                print("Error fetching documents: \(error)")
-            } else {
-                for document in querySnapshot!.documents {
-                    let data = document.data()
-                    let aprobadas = data["aprobadas"] as! Bool
-                    let estatus = data["estatus"] as! String
-                    let evento = data["evento"] as! String
-                    let evidencia = data["evidencia"] as! String
-                    let hrs = data["hrs"] as! Int
-                    let idVoluntario = data["idVoluntario"] as! String
-                    let horas = horasVoluntarios(aprobadas: aprobadas, estatus: estatus, evento: evento, evidencia: evidencia, hrs: hrs, idVoluntario: idVoluntario, horasRef: document.reference)
-                    self.listasHoras.append(horas)
-                }
-                self.tableView.reloadData()
-            }
+        guard let horas = horaSeleccionado else {
+            return
         }
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.register(AprobarHorasTableViewCell.nib(), forCellReuseIdentifier: AprobarHorasTableViewCell.identifier)
-    }
-}
-
-extension AprobarHorasViewController : UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let horaSeleccionado = listasHoras[indexPath.row]
-        let storyborad = UIStoryboard(name: "DetallesAprobarHorasViewController", bundle: nil)
-        if let detalleVC = storyborad.instantiateViewController(withIdentifier: "DetallesAprobarHorasViewController") as? DetallesAprobarHorasViewController {
-            detalleVC.horaSeleccionado = horaSeleccionado
-            self.navigationController?.pushViewController(detalleVC, animated: true)
-        }
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listasHoras.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let horasCell = tableView.dequeueReusableCell(withIdentifier: AprobarHorasTableViewCell.identifier, for: indexPath) as! AprobarHorasTableViewCell
-        let horas = listasHoras[indexPath.row]
         
         let eventoRef = self.db.collection("anuncios").document(horas.evento)
 
@@ -84,9 +36,9 @@ extension AprobarHorasViewController : UITableViewDataSource, UITableViewDelegat
                 }
 
                 let eventoData = eventoDoc.data()
-                let nombreEvento = eventoData?["titulo"] as? String ?? ""
+                let nameEvento = eventoData?["titulo"] as? String ?? ""
                 
-                horasCell.eventoLabel.text = nombreEvento
+                self.nombreEvento.text = nameEvento
             }
 
         let voluntarioRef = self.db.collection("users").document(horas.idVoluntario)
@@ -101,25 +53,26 @@ extension AprobarHorasViewController : UITableViewDataSource, UITableViewDelegat
             let voluntarioData = voluntario.data()
             let nombreVoluntario = voluntarioData?["nombre"] as? String ?? ""
             let ideVoluntario = voluntarioData?["matricula"] as? String ?? ""
-            horasCell.nameLabel.text = nombreVoluntario
-            horasCell.idLabel.text = ideVoluntario
+            self.nombreVoluntario.text = "Voluntario: \(nombreVoluntario)"
+            self.idVoluntario.text = ideVoluntario
         }
 
-        horasCell.hrsLabel.text = "\(horas.hrs)"
+        self.horasAprobar.text = "Horas Aprobar \(horas.hrs)"
         
-        horasCell.aprobarAction = { [weak self] in
-            self?.aprobarAction(horas: horas)
+        if let imageUrl = URL(string: horas.evidencia) {
+            DispatchQueue.global().async {
+                if let data = try? Data(contentsOf: imageUrl){
+                    DispatchQueue.main.async {
+                        self.imageView.image = UIImage(data: data)
+                    }
+                }
+            }
         }
         
-        horasCell.rechazarAction = { [weak self] in
-            self?.rechazarAction(horas: horas)
-        }
-        
-        
-        return horasCell
     }
     
-    func aprobarAction(horas: horasVoluntarios) {
+    
+    @IBAction func aprobarHoras(_ sender: Any) {
         let alertController = UIAlertController(title: "Confirmación", message: "¿Estás seguro de que deseas aprobar estas horas? Esta acción es irreversible.", preferredStyle: .alert)
 
         let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
@@ -128,14 +81,17 @@ extension AprobarHorasViewController : UITableViewDataSource, UITableViewDelegat
         // Agregar acción de aprobar
        let aprobarAction = UIAlertAction(title: "Aprobar", style: .default) { [weak self] (_) in
            // Aquí llamamos a la función que realiza la lógica de aprobar
-           self?.actualizarHorasAprobadas(horas: horas)
+           if let horasSeleccionado = self?.horaSeleccionado {
+               self?.actualizarHorasAprobadas(horas: horasSeleccionado)
+           }
        }
        alertController.addAction(aprobarAction)
     
         present(alertController, animated: true, completion: nil)
 
     }
-    func rechazarAction(horas: horasVoluntarios){
+    
+    @IBAction func rechazarHoras(_ sender: Any) {
         let alertController = UIAlertController(title: "Confirmación", message: "¿Estás seguro de que deseas rechazar estas horas? Esta acción es irreversible.", preferredStyle: .alert)
 
         let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
@@ -144,14 +100,16 @@ extension AprobarHorasViewController : UITableViewDataSource, UITableViewDelegat
         // Agregar acción de aprobar
        let aprobarAction = UIAlertAction(title: "Rechazar", style: .default) { [weak self] (_) in
            // Aquí llamamos a la función que realiza la lógica de aprobar
-           self?.actualizarHorasRechazadas(horas: horas)
+           if let horasSeleccionado = self?.horaSeleccionado {
+               self?.actualizarHorasRechazadas(horas: horasSeleccionado)
+           }
        }
        alertController.addAction(aprobarAction)
     
         present(alertController, animated: true, completion: nil)
 
     }
-    
+        
     func actualizarHorasRechazadas(horas: horasVoluntarios) {
         let updateData: [String: Any] = [
             "estatus": "rechazadas",
@@ -163,13 +121,11 @@ extension AprobarHorasViewController : UITableViewDataSource, UITableViewDelegat
                 print("Error updating document: \(error)")
             } else {
                 print("Document successfully update")
+                self.redirigirAOtroStoryboard()
+
             }
             
         }
-        if let index = self.listasHoras.firstIndex(where: { $0.horasRef == horas.horasRef }) {
-            self.listasHoras.remove(at: index)
-        }
-        self.tableView.reloadData()
     }
     
     func actualizarHorasAprobadas(horas: horasVoluntarios) {
@@ -185,6 +141,8 @@ extension AprobarHorasViewController : UITableViewDataSource, UITableViewDelegat
                 print("Error updating document: \(error)")
             } else {
                 print("Document successfully updated")
+                self.redirigirAOtroStoryboard()
+
             }
         }
         
@@ -214,9 +172,13 @@ extension AprobarHorasViewController : UITableViewDataSource, UITableViewDelegat
                 }
             }
         }
-        if let index = self.listasHoras.firstIndex(where: { $0.horasRef == horas.horasRef }) {
-            self.listasHoras.remove(at: index)
-        }
-        self.tableView.reloadData()
     }
+    
+    func redirigirAOtroStoryboard() {
+        let storyboard = UIStoryboard(name: "MenuViewController", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "MenuViewController")
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }

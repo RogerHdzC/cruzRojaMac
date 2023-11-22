@@ -33,8 +33,7 @@
                                             <color key="baseBackgroundColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="updatename:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="W0b-eF-bYI"/>
-                                            <action selector="updatenameAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="S57-QH-Cgl"/>
+                                            <action selector="updatenameAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SPH-aR-oX6"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cr-1G-dOi">
@@ -109,6 +108,9 @@
                                             </attributedString>
                                             <color key="baseBackgroundColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="aprobarAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VyA-Rh-n7M"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -133,6 +135,16 @@
                                     <constraint firstAttribute="height" constant="150" id="ZjY-g3-oyH"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ArU-bv-v8H">
+                                <rect key="frame" x="235" y="304.66666666666669" width="80" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Update">
+                                    <color key="baseBackgroundColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="updatephotoAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SKI-jO-5RS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -141,6 +153,10 @@
                             <constraint firstItem="0gH-oN-XeD" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="372" id="Ixx-mi-P44"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yeQ-3K-bSA" secondAttribute="trailing" constant="25.666666666666686" id="QHg-JK-t9N"/>
                             <constraint firstItem="vSi-qZ-RjT" firstAttribute="top" secondItem="NDl-mo-Kmu" secondAttribute="bottom" constant="37" id="Uol-YQ-2TC"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ArU-bv-v8H" secondAttribute="trailing" constant="78" id="YHT-cd-WTC"/>
+                            <constraint firstItem="ArU-bv-v8H" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="235" id="ZMi-02-hPj"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ArU-bv-v8H" secondAttribute="bottom" constant="479" id="dcF-s9-y4z"/>
+                            <constraint firstItem="ArU-bv-v8H" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="245.66666666666669" id="edh-Bx-t2n"/>
                             <constraint firstItem="NDl-mo-Kmu" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="gFs-rZ-Lme"/>
                             <constraint firstItem="vSi-qZ-RjT" firstAttribute="centerX" secondItem="0gH-oN-XeD" secondAttribute="centerX" id="gab-wr-uSu"/>
                             <constraint firstItem="0gH-oN-XeD" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="lXb-zX-TMh"/>

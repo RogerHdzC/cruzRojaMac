@@ -37,6 +37,8 @@
 		839616E42AFD4C8600D7D6E1 /* DashboardViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839616E32AFD4C8600D7D6E1 /* DashboardViewController.storyboard */; };
 		839616E62AFD4C9C00D7D6E1 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839616E52AFD4C9C00D7D6E1 /* DashboardViewController.swift */; };
 		8399B14A2AF1B0E9006D68E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8399B1492AF1B0E9006D68E8 /* GoogleService-Info.plist */; };
+		839B25C12B0E52C900FD8D9F /* DetallesAprobarHorasViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839B25C02B0E52C900FD8D9F /* DetallesAprobarHorasViewController.storyboard */; };
+		839B25C32B0E52DD00FD8D9F /* DetallesAprobarHorasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839B25C22B0E52DD00FD8D9F /* DetallesAprobarHorasViewController.swift */; };
 		839F3A6A2AFC0361002D48F9 /* MenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839F3A692AFC0361002D48F9 /* MenuViewController.storyboard */; };
 		839F3A6C2AFC03BD002D48F9 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839F3A6B2AFC03BD002D48F9 /* MenuViewController.swift */; };
 		839F525F2B065BB7003279EA /* UserHorasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839F525D2B065BB7003279EA /* UserHorasTableViewCell.swift */; };
@@ -61,9 +63,9 @@
 		83A9884E2AF566DD0021BCA5 /* AprobarUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83A9884D2AF566DD0021BCA5 /* AprobarUserViewController.swift */; };
 		83C6B5A62AFC368D007CDEF0 /* AjustesViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83C6B5A52AFC368D007CDEF0 /* AjustesViewController.storyboard */; };
 		83C6B5AA2AFC36B0007CDEF0 /* AjustesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C6B5A92AFC36B0007CDEF0 /* AjustesViewController.swift */; };
-		83F729EE2B054309007FFE4D /* UpdateNameViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83F729ED2B054309007FFE4D /* UpdateNameViewController.storyboard */; };
+		83F729EE2B054309007FFE4D /* up in Resources */ = {isa = PBXBuildFile; fileRef = 83F729ED2B054309007FFE4D /* up */; };
 		83F729F02B05432D007FFE4D /* UpdateNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F729EF2B05432D007FFE4D /* UpdateNameViewController.swift */; };
-		83F729F22B055085007FFE4D /* UpdateEmailViewConttroller.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83F729F12B055085007FFE4D /* UpdateEmailViewConttroller.storyboard */; };
+		83F729F22B055085007FFE4D /* UpdateEmailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83F729F12B055085007FFE4D /* UpdateEmailViewController.storyboard */; };
 		83F729F62B055D1F007FFE4D /* UpdateEmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83F729F52B055D1F007FFE4D /* UpdateEmailViewController.swift */; };
 		83F729F82B055DA7007FFE4D /* UpdatePhotoViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83F729F72B055DA7007FFE4D /* UpdatePhotoViewController.storyboard */; };
 		83F729FA2B0561E6007FFE4D /* UpdatePasswordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83F729F92B0561E6007FFE4D /* UpdatePasswordViewController.storyboard */; };
@@ -89,6 +91,8 @@
 		839616E32AFD4C8600D7D6E1 /* DashboardViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DashboardViewController.storyboard; sourceTree = "<group>"; };
 		839616E52AFD4C9C00D7D6E1 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		8399B1492AF1B0E9006D68E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		839B25C02B0E52C900FD8D9F /* DetallesAprobarHorasViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetallesAprobarHorasViewController.storyboard; sourceTree = "<group>"; };
+		839B25C22B0E52DD00FD8D9F /* DetallesAprobarHorasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetallesAprobarHorasViewController.swift; sourceTree = "<group>"; };
 		839F3A692AFC0361002D48F9 /* MenuViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuViewController.storyboard; sourceTree = "<group>"; };
 		839F3A6B2AFC03BD002D48F9 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		839F525D2B065BB7003279EA /* UserHorasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHorasTableViewCell.swift; sourceTree = "<group>"; };
@@ -115,9 +119,9 @@
 		83A9884D2AF566DD0021BCA5 /* AprobarUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AprobarUserViewController.swift; sourceTree = "<group>"; };
 		83C6B5A52AFC368D007CDEF0 /* AjustesViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AjustesViewController.storyboard; sourceTree = "<group>"; };
 		83C6B5A92AFC36B0007CDEF0 /* AjustesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AjustesViewController.swift; sourceTree = "<group>"; };
-		83F729ED2B054309007FFE4D /* UpdateNameViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UpdateNameViewController.storyboard; sourceTree = "<group>"; };
+		83F729ED2B054309007FFE4D /* up */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = up; sourceTree = "<group>"; };
 		83F729EF2B05432D007FFE4D /* UpdateNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNameViewController.swift; sourceTree = "<group>"; };
-		83F729F12B055085007FFE4D /* UpdateEmailViewConttroller.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UpdateEmailViewConttroller.storyboard; sourceTree = "<group>"; };
+		83F729F12B055085007FFE4D /* UpdateEmailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UpdateEmailViewController.storyboard; sourceTree = "<group>"; };
 		83F729F52B055D1F007FFE4D /* UpdateEmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateEmailViewController.swift; sourceTree = "<group>"; };
 		83F729F72B055DA7007FFE4D /* UpdatePhotoViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UpdatePhotoViewController.storyboard; sourceTree = "<group>"; };
 		83F729F92B0561E6007FFE4D /* UpdatePasswordViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UpdatePasswordViewController.storyboard; sourceTree = "<group>"; };
@@ -216,13 +220,15 @@
 				839F3A692AFC0361002D48F9 /* MenuViewController.storyboard */,
 				83C6B5A52AFC368D007CDEF0 /* AjustesViewController.storyboard */,
 				83F729F92B0561E6007FFE4D /* UpdatePasswordViewController.storyboard */,
-				83F729ED2B054309007FFE4D /* UpdateNameViewController.storyboard */,
+				83F729ED2B054309007FFE4D /* up */,
 				839616E32AFD4C8600D7D6E1 /* DashboardViewController.storyboard */,
-				83F729F12B055085007FFE4D /* UpdateEmailViewConttroller.storyboard */,
+				83F729F12B055085007FFE4D /* UpdateEmailViewController.storyboard */,
 				839F525D2B065BB7003279EA /* UserHorasTableViewCell.swift */,
 				839F525E2B065BB7003279EA /* UserHorasTableViewCell.xib */,
 				83F729F72B055DA7007FFE4D /* UpdatePhotoViewController.storyboard */,
 				8388602C2B059DE200909304 /* DetallesAnuncioViewController.swift */,
+				839B25C02B0E52C900FD8D9F /* DetallesAprobarHorasViewController.storyboard */,
+				839B25C22B0E52DD00FD8D9F /* DetallesAprobarHorasViewController.swift */,
 				83A65AA52ACF2F8600B585A9 /* Assets.xcassets */,
 				83A65AAA2ACF2F8600B585A9 /* Info.plist */,
 				8399B1492AF1B0E9006D68E8 /* GoogleService-Info.plist */,
@@ -321,15 +327,16 @@
 				839F52602B065BB7003279EA /* UserHorasTableViewCell.xib in Resources */,
 				83A65AA42ACF2F8500B585A9 /* Main.storyboard in Resources */,
 				8399B14A2AF1B0E9006D68E8 /* GoogleService-Info.plist in Resources */,
+				839B25C12B0E52C900FD8D9F /* DetallesAprobarHorasViewController.storyboard in Resources */,
 				83F729F82B055DA7007FFE4D /* UpdatePhotoViewController.storyboard in Resources */,
 				839616E22AFD1D6900D7D6E1 /* AnuncioTableViewCell.xib in Resources */,
 				833A71E72AF0626F00AE3339 /* InicioViewController.xib in Resources */,
 				833A71F02AF06D8F00AE3339 /* SignUpViewController.xib in Resources */,
 				839F3A6A2AFC0361002D48F9 /* MenuViewController.storyboard in Resources */,
-				83F729F22B055085007FFE4D /* UpdateEmailViewConttroller.storyboard in Resources */,
+				83F729F22B055085007FFE4D /* UpdateEmailViewController.storyboard in Resources */,
 				833A71EE2AF06D7900AE3339 /* LogInViewController.xib in Resources */,
 				83A3035E2AF99B3900744625 /* AprobarUserViewController.storyboard in Resources */,
-				83F729EE2B054309007FFE4D /* UpdateNameViewController.storyboard in Resources */,
+				83F729EE2B054309007FFE4D /* up in Resources */,
 				839F52642B06747D003279EA /* AprobarHorasViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,6 +362,7 @@
 				839616E62AFD4C9C00D7D6E1 /* DashboardViewController.swift in Sources */,
 				83F729FE2B056248007FFE4D /* UpdatePhotoViewController.swift in Sources */,
 				83F729F02B05432D007FFE4D /* UpdateNameViewController.swift in Sources */,
+				839B25C32B0E52DD00FD8D9F /* DetallesAprobarHorasViewController.swift in Sources */,
 				83A3504A2B0268B70023A084 /* NuevoAnuncioViewController.swift in Sources */,
 				83A303662AF9AD0100744625 /* RecuperarContraseñaViewController.swift in Sources */,
 				839F52622B067436003279EA /* AprobarHorasViewController.swift in Sources */,

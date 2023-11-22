@@ -87,8 +87,10 @@ extension AprobarUserViewController : UITableViewDataSource, UITableViewDelegate
             if let error = error {
                 print("Error updating user status: \(error)")
             } else {
-                // Actualiza la tabla o vista después de la aprobación
-            }
+                if let index = self.pendingUsers.firstIndex(where: { $0.rol == userReference }) {
+                    self.pendingUsers.remove(at: index)
+                }
+                self.tableView.reloadData()            }
         }
     }
     
