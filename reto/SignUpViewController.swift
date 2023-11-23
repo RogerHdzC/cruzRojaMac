@@ -20,6 +20,7 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var repasswordTextField: UITextField!
     @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var ojoButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,8 @@ class SignUpViewController: UIViewController {
         
         // Analytics Event
         Analytics.logEvent("InitScreen", parameters: ["message":"Integración de Firebase completa"])
+        
+        ojoButton.setTitle("", for: .normal)
     }
 
     
@@ -108,6 +111,12 @@ class SignUpViewController: UIViewController {
     // Método para ocultar el teclado cuando se toca en otra parte de la pantalla
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
+    }
+    
+    @IBAction func ojoButton(_ sender: Any) {
+        self.passwordTextField.isSecureTextEntry.toggle()
+        let imageName = passwordTextField.isSecureTextEntry ? "ojo" : "ojocerrado"
+        self.ojoButton.setImage(UIImage(named: imageName), for:.normal)
     }
     
 }

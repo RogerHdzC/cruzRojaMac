@@ -7,12 +7,26 @@
 
 import Foundation
 import UIKit
+import FirebaseAuth
 
 class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        // Ocultar la barra de navegación
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        // Mostrar la barra de navegación cuando se va a otro controlador de vista
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+
     
     @IBAction func ajustesAction(_ sender: Any) {
         let storyboard = UIStoryboard(name: "AjustesViewController", bundle: nil)
@@ -46,4 +60,13 @@ class MenuViewController: UIViewController {
         
     }
     
+    @IBAction func cerrarSesion(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+            // Después de cerrar sesión, puedes redirigir al usuario a la pantalla de inicio de sesión o a otra vista según tus necesidades.
+            navigationController?.popToRootViewController(animated: true)
+        } catch let error as NSError {
+            print("Error al cerrar sesión: \(error.localizedDescription)")
+        }
+    }
 }

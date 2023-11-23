@@ -44,14 +44,14 @@ class AnunciosViewController: UIViewController{
                     let titulo = data["titulo"] as! String
                     var fecha: Date?
                     if let timestamp = data["fecha"] as? Timestamp {
-                        let fecha = timestamp.dateValue()
+                        fecha = timestamp.dateValue()
                     }
                     let fechaEvento = data["fechaEvento"] as? String
                     let hrsMax = data["hrsMax"] as? Int
-                    let imagen = data["imagen"] as! String
+                    let imagen = data["imagen"] as? String
                     let tipo = data["tipo"] as! Bool
-                    let descripcion = data["descripcion"] as! String
-                    let anuncio = Anuncios(author: author ?? "", descripcion: descripcion, fecha: fecha ?? Date(), fechaEvento: fechaEvento ?? "", hrsMax: hrsMax ?? 0, imagen: imagen, tipo: tipo, titulo: titulo, documentRef: document.reference)
+                    let descripcion = data["descripcion"] as? String
+                    let anuncio = Anuncios(author: author ?? "", descripcion: descripcion ?? "", fecha: fecha ?? Date(), fechaEvento: fechaEvento ?? "", hrsMax: hrsMax ?? 0, imagen: imagen ?? "", tipo: tipo, titulo: titulo, documentRef: document.reference)
                     self.listasAnuncios.append(anuncio)
                 }
                 self.tableView.reloadData()

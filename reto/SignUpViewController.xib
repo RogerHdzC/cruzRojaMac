@@ -11,6 +11,7 @@
             <connections>
                 <outlet property="emailTextField" destination="nfS-wL-Fky" id="Ff5-Dp-NZW"/>
                 <outlet property="nombreTextField" destination="bQ6-1n-ZAh" id="JCF-9a-ncl"/>
+                <outlet property="ojoButton" destination="5tP-Hp-L1F" id="b7Q-gF-hUJ"/>
                 <outlet property="passwordTextField" destination="U0R-bb-c6G" id="xYv-it-w2J"/>
                 <outlet property="repasswordTextField" destination="21v-Hg-sYd" id="Z2w-BM-haO"/>
                 <outlet property="signUpButton" destination="Pj6-0i-G4a" id="ToE-Jo-OAL"/>
@@ -48,101 +49,117 @@
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="1x1-vV-0hO">
-                    <rect key="frame" x="46" y="204.00000000000003" width="300" height="269.66666666666674"/>
+                    <rect key="frame" x="46" y="204" width="300" height="305"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dYK-M3-0gI">
-                            <rect key="frame" x="0.0" y="0.0" width="61.333333333333336" height="20.333333333333332"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <rect key="frame" x="0.0" y="0.0" width="70" height="23"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                             <color key="textColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Tu Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQ6-1n-ZAh">
-                            <rect key="frame" x="0.0" y="31.333333333333343" width="300" height="28.666666666666671"/>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tu Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bQ6-1n-ZAh">
+                            <rect key="frame" x="0.0" y="34" width="300" height="34"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="300" id="vs9-3A-3Cn"/>
                             </constraints>
-                            <color key="textColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrE-N7-8hl">
-                            <rect key="frame" x="0.0" y="71" width="40.666666666666664" height="20.333333333333329"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo electtronico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrE-N7-8hl">
+                            <rect key="frame" x="0.0" y="79" width="168" height="23"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                             <color key="textColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Tu email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nfS-wL-Fky">
-                            <rect key="frame" x="0.0" y="102.33333333333331" width="300" height="28.666666666666657"/>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tu email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nfS-wL-Fky">
+                            <rect key="frame" x="0.0" y="113" width="300" height="34"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="iET-Dg-ksa"/>
                             </constraints>
-                            <color key="textColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="40J-kc-a3h">
-                            <rect key="frame" x="0.0" y="142" width="73.333333333333329" height="20.333333333333343"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <rect key="frame" x="0.0" y="158" width="84" height="23"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                             <color key="textColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Tu password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U0R-bb-c6G">
-                            <rect key="frame" x="0.0" y="173.33333333333331" width="300" height="27"/>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tu password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U0R-bb-c6G">
+                            <rect key="frame" x="0.0" y="192" width="300" height="34"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="fkD-XC-86y"/>
                             </constraints>
-                            <color key="textColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repite tu Contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vos-EI-1PS">
-                            <rect key="frame" x="0.0" y="211.33333333333331" width="160.33333333333334" height="20.333333333333343"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <rect key="frame" x="0.0" y="237" width="182.33333333333334" height="23"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                             <color key="textColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Tu password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="21v-Hg-sYd">
-                            <rect key="frame" x="0.0" y="242.66666666666669" width="300" height="27"/>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tu password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="21v-Hg-sYd">
+                            <rect key="frame" x="0.0" y="271" width="300" height="34"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="300" id="h4S-Cd-wU2"/>
                             </constraints>
-                            <color key="textColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                         </textField>
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="n7n-N3-byt">
-                    <rect key="frame" x="45.999999999999986" y="87" width="241.66666666666663" height="67.666666666666686"/>
+                    <rect key="frame" x="16" y="76" width="284.66666666666669" height="90.333333333333314"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crea Tu Cuenta" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPH-ef-HJX">
-                            <rect key="frame" x="0.0" y="0.0" width="151.33333333333334" height="25.333333333333332"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                            <rect key="frame" x="0.0" y="0.0" width="284.66666666666669" height="48"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                             <color key="textColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingresa tus datos o inicia sesión" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iiH-ub-vtI">
-                            <rect key="frame" x="0.0" y="47.333333333333343" width="241.66666666666666" height="20.333333333333329"/>
+                            <rect key="frame" x="0.0" y="70" width="241.66666666666666" height="20.333333333333329"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                 </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tP-Hp-L1F">
+                    <rect key="frame" x="328" y="393" width="49" height="39"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" image="ojo">
+                        <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="ojoButton:" destination="-1" eventType="touchUpInside" id="PtR-tu-h4P"/>
+                    </connections>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="n7n-N3-byt" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="28" id="EU5-8e-rbG"/>
+                <constraint firstItem="5tP-Hp-L1F" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="156" id="05L-MZ-89o"/>
+                <constraint firstItem="n7n-N3-byt" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="8TM-Al-1cW"/>
+                <constraint firstItem="5tP-Hp-L1F" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-13.5" id="C2v-7v-8ik"/>
+                <constraint firstItem="n7n-N3-byt" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="17" id="CJ8-LB-9It"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="qXk-q9-4OS" secondAttribute="trailing" constant="134" id="T34-Sb-Xu0"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="n7n-N3-byt" secondAttribute="trailing" constant="105.33333333333337" id="TTF-XN-sH1"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1x1-vV-0hO" secondAttribute="trailing" constant="47" id="jRt-0a-cEb"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="qXk-q9-4OS" secondAttribute="bottom" constant="60.333333333333371" id="p63-19-eYj"/>
                 <constraint firstItem="1x1-vV-0hO" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="145" id="pqG-0d-QYa"/>
             </constraints>
-            <point key="canvasLocation" x="94" y="-12"/>
+            <point key="canvasLocation" x="93.89312977099236" y="-12.67605633802817"/>
         </view>
     </objects>
+    <resources>
+        <image name="ojo" width="25" height="25"/>
+    </resources>
 </document>

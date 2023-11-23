@@ -118,6 +118,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Cerrar Sesión">
                                     <color key="baseBackgroundColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="cerrarSesion:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="HXg-XE-4Dd"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
@@ -131,6 +134,7 @@
                             <constraint firstItem="bhj-ED-fF6" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="57" id="qLR-VO-bsC"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="RRr-Zv-ZDG"/>
                     <connections>
                         <outlet property="view" destination="5EZ-qb-Rvc" id="rG3-E2-80I"/>
                     </connections>

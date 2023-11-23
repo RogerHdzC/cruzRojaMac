@@ -14,26 +14,42 @@
             filePath = "reto/MenuViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "MenuViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0B075238-E138-491A-A3DD-8F4DB8E59AF7"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "reto/AppDelegate.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "application(_:configurationForConnecting:options:)"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "dashboardAction(_:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BE140632-147A-43E0-9278-5040EA2C284C - 9f37d9571f6055cd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reto.MenuViewController.dashboardAction(Any) -&gt; ()"
+                  moduleName = "reto"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/administrador/Desktop/Reto_Cruz_Roja/reto/reto/MenuViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "220">
+               </Location>
+               <Location
+                  uuid = "BE140632-147A-43E0-9278-5040EA2C284C - 9f37d9571f6055aa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reto.MenuViewController.dashboardAction(Any) -&gt; ()"
+                  moduleName = "reto"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/administrador/Desktop/Reto_Cruz_Roja/reto/reto/MenuViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "255">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

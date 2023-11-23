@@ -28,13 +28,6 @@ class InitViewController: UIViewController {
         self.navigationController?.pushViewController(viewSignUp, animated: true)
     }
     
-    
-    @IBAction func tableViewNav(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "AprobarUserViewController", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "AprobarUserViewController")
-        
-        navigationController?.pushViewController(vc, animated: true)
-    }
     @IBAction func ajustes(_ sender: Any) {
         let storyboard = UIStoryboard(name: "MenuViewController", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "MenuViewController")

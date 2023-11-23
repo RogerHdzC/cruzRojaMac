@@ -21,7 +21,5 @@
 			</array>
 		</dict>
 	</dict>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>Por favor dame acceso a tus fotos para poder subir el flyer</string>
 </dict>
 </plist>

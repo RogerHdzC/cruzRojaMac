@@ -26,8 +26,12 @@
                             <action selector="deleteAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="nvB-Lx-d75"/>
                         </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título del Anuncio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="248-nn-Bhl">
-                        <rect key="frame" x="16" y="12" width="137" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título del Anuncio" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="248-nn-Bhl">
+                        <rect key="frame" x="16" y="12.666666666666666" width="136.66666666666666" height="20.333333333333336"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="136.66999999999999" id="ke8-Hk-cFa"/>
+                            <constraint firstAttribute="height" constant="20.329999999999998" id="zsc-8c-nfC"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
