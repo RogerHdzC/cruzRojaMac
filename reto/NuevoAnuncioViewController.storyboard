@@ -38,6 +38,8 @@
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8Bf-2R-VOb">
                                                 <rect key="frame" x="0.0" y="27.333333333333343" width="316" height="34"/>
+                                                <color key="backgroundColor" red="0.96078437569999997" green="0.96078425649999999" blue="0.96078437569999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="tintColor" red="1" green="0.0187217119" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="9aH-px-gEz"/>
                                                     <constraint firstAttribute="width" constant="316" id="u0H-kr-LWK"/>
@@ -70,7 +72,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="91g-NE-FOs">
-                                        <rect key="frame" x="0.0" y="124.33333333333334" width="362" height="94"/>
+                                        <rect key="frame" x="0.0" y="124.33333333333334" width="362.66666666666669" height="94"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5Nc-Pl-1TZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="135" height="94"/>
@@ -87,6 +89,8 @@
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ggy-zV-Zdt">
                                                         <rect key="frame" x="0.0" y="60" width="97" height="34"/>
+                                                        <color key="backgroundColor" red="0.96078437569999997" green="0.96078425649999999" blue="0.96078437569999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="tintColor" red="1" green="0.0187217119" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="34" id="lMB-5v-XEs"/>
                                                             <constraint firstAttribute="width" constant="97" id="lt9-nL-nRn"/>
@@ -98,16 +102,16 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="JZr-aG-wxc">
-                                                <rect key="frame" x="143" y="0.0" width="219" height="94"/>
+                                                <rect key="frame" x="143" y="0.0" width="219.66666666666663" height="94"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4NV-2l-jva">
-                                                        <rect key="frame" x="86.333333333333343" y="0.0" width="46.333333333333343" height="20.333333333333332"/>
+                                                        <rect key="frame" x="86.666666666666657" y="0.0" width="46.333333333333343" height="20.333333333333332"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="kdY-KH-IoV">
-                                                        <rect key="frame" x="0.0" y="20.333333333333314" width="219" height="73.666666666666671"/>
+                                                        <rect key="frame" x="0.0" y="20.333333333333314" width="219.66666666666666" height="73.666666666666671"/>
                                                         <color key="tintColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="0.71999999999999997" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <connections>
                                                             <action selector="uploadAction:" destination="Y6W-OH-hqX" eventType="valueChanged" id="8XK-LP-xKr"/>
@@ -128,6 +132,8 @@
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U79-9i-gel">
                                                 <rect key="frame" x="0.0" y="28.333333333333314" width="316" height="34"/>
+                                                <color key="backgroundColor" red="0.96078437569999997" green="0.96078425649999999" blue="0.96078437569999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="tintColor" red="1" green="0.0187217119" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="34" id="6td-eS-EQV"/>
                                                     <constraint firstAttribute="width" constant="316" id="hgS-kd-InQ"/>

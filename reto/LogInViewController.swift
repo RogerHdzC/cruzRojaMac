@@ -41,7 +41,7 @@ class LogInViewController: UIViewController {
                 
                 if error != nil {
                         
-                    let alertController = UIAlertController(title: "Error", message: "Credenciales inválidas o usuario no aprobado", preferredStyle: .alert)
+                    let alertController = UIAlertController(title: "Error", message: "Correo o contraseña incorrectos", preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
                     
                     self.present(alertController, animated: true, completion: nil)
@@ -89,7 +89,7 @@ class LogInViewController: UIViewController {
                     }
                 }
             } else {
-                let alertController = UIAlertController(title: "Error", message: "Credenciales inválidas", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "Error", message: "Correo o contraseña incorrectos", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
                 
                 self.present(alertController, animated: true, completion: nil)

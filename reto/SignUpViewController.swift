@@ -46,56 +46,70 @@ class SignUpViewController: UIViewController {
         let isPasswordValid = passwordTest.evaluate(with: password)
         
         
-        if !email.isEmpty && !password.isEmpty {
-            if isPasswordValid {
-                if password == repassword {
-                    Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-                        
-                        if error != nil {
-                            let alertController = UIAlertController(title: "Error", message: "Se ha producido un error registrando el usuario", preferredStyle: .alert)
-                            alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
-                            
-                            self.present(alertController, animated: true, completion: nil)
-                            
-                        } else if let uid = authResult?.user.uid {
-                            let userData = [
-                                "email": email,
-                                "Nombre": nombre,
-                                "rol": rolRef,
-                                "estado": estado
-                            ]
-                            
-                            self.db.collection("users").document(uid).setData(userData) { error in
+        if !nombre.isEmpty {
+            if !password.isEmpty {
+                if !email.isEmpty {
+                    if isPasswordValid {
+                        if password == repassword {
+                            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                                
                                 if error != nil {
-                                    let alertController = UIAlertController(title: "Error", message: "Error al guardar los datos", preferredStyle: .alert)
+                                    let alertController = UIAlertController(title: "Error", message: "Se ha producido un error registrando el usuario", preferredStyle: .alert)
                                     alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
                                     
                                     self.present(alertController, animated: true, completion: nil)
+                                    
+                                } else if let uid = authResult?.user.uid {
+                                    let userData = [
+                                        "email": email,
+                                        "Nombre": nombre,
+                                        "rol": rolRef,
+                                        "estado": estado
+                                    ]
+                                    
+                                    self.db.collection("users").document(uid).setData(userData) { error in
+                                        if error != nil {
+                                            let alertController = UIAlertController(title: "Error", message: "Error al guardar los datos", preferredStyle: .alert)
+                                            alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+                                            
+                                            self.present(alertController, animated: true, completion: nil)
+                                        } else {
+                                            self.navigationController?.pushViewController(ConfirmacionViewController(email: email), animated: true)
+                                        }
+                                    }
                                 } else {
-                                    self.navigationController?.pushViewController(ConfirmacionViewController(email: email), animated: true)
+                                    let alertController = UIAlertController(title: "Error", message: "Error al obtener el ID del usuario", preferredStyle: .alert)
+                                    alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+                                    
+                                    self.present(alertController, animated: true, completion: nil)
                                 }
                             }
-                        } else {
-                            let alertController = UIAlertController(title: "Error", message: "Error al obtener el ID del usuario", preferredStyle: .alert)
+                        }else{
+                            let alertController = UIAlertController(title: "Error", message: "Las contraseñas deben coincidir", preferredStyle: .alert)
                             alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
                             
                             self.present(alertController, animated: true, completion: nil)
                         }
+                    }else {
+                        let alertController = UIAlertController(title: "Error", message: "La contraseña no cumple con los requisitos: debe tener al menos 8 caracteres, 2 números y un carácter especial.", preferredStyle: .alert)
+                        alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+                        
+                        self.present(alertController, animated: true, completion: nil)
                     }
-                }else{
-                    let alertController = UIAlertController(title: "Error", message: "Las contraseñas deben coincidir", preferredStyle: .alert)
+                }else {
+                    let alertController = UIAlertController(title: "Error", message: "El campo de correo electrónico es obligatorio", preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
                     
                     self.present(alertController, animated: true, completion: nil)
                 }
             }else {
-                let alertController = UIAlertController(title: "Error", message: "La contraseña no cumple con los requisitos: debe tener al menos 8 caracteres, 2 números y un carácter especial.", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "Error", message: "El campo de contraseña es obligatorio", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
                 
                 self.present(alertController, animated: true, completion: nil)
             }
         } else {
-            let alertController = UIAlertController(title: "Error", message: "Los campos de correo electrónico y contraseña son obligatorios", preferredStyle: .alert)
+            let alertController = UIAlertController(title: "Error", message: "El campo de nombre es obligatorio", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
             
             self.present(alertController, animated: true, completion: nil)

@@ -14,9 +14,7 @@
 		833A71CE2AEFF70800AE3339 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 833A71CD2AEFF70800AE3339 /* FirebaseAppCheck */; };
 		833A71D02AEFFB1100AE3339 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833A71CF2AEFFB1000AE3339 /* LogInViewController.swift */; };
 		833A71D22AEFFD4700AE3339 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833A71D12AEFFD4700AE3339 /* SignUpViewController.swift */; };
-		833A71D62AF024B900AE3339 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 833A71D52AF024B900AE3339 /* FirebaseAnalytics */; };
 		833A71D82AF024B900AE3339 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 833A71D72AF024B900AE3339 /* FirebaseAnalyticsOnDeviceConversion */; };
-		833A71DA2AF024B900AE3339 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 833A71D92AF024B900AE3339 /* FirebaseAnalyticsSwift */; };
 		833A71DC2AF024B900AE3339 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 833A71DB2AF024B900AE3339 /* FirebaseAnalyticsWithoutAdIdSupport */; };
 		833A71DE2AF024B900AE3339 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 833A71DD2AF024B900AE3339 /* FirebaseAppCheck */; };
 		833A71E12AF0287700AE3339 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 833A71E02AF0287700AE3339 /* FirebaseAuth */; };
@@ -124,9 +122,7 @@
 			files = (
 				833A71CA2AEFF70800AE3339 /* FirebaseAnalyticsSwift in Frameworks */,
 				833A71C62AEFF70800AE3339 /* FirebaseAnalytics in Frameworks */,
-				833A71D62AF024B900AE3339 /* FirebaseAnalytics in Frameworks */,
 				833A71D82AF024B900AE3339 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
-				833A71DA2AF024B900AE3339 /* FirebaseAnalyticsSwift in Frameworks */,
 				837A78512AF41353009E2A60 /* FirebaseFirestore in Frameworks */,
 				833A71C82AEFF70800AE3339 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				833A71CE2AEFF70800AE3339 /* FirebaseAppCheck in Frameworks */,
@@ -240,9 +236,7 @@
 				833A71C92AEFF70800AE3339 /* FirebaseAnalyticsSwift */,
 				833A71CB2AEFF70800AE3339 /* FirebaseAnalyticsWithoutAdIdSupport */,
 				833A71CD2AEFF70800AE3339 /* FirebaseAppCheck */,
-				833A71D52AF024B900AE3339 /* FirebaseAnalytics */,
 				833A71D72AF024B900AE3339 /* FirebaseAnalyticsOnDeviceConversion */,
-				833A71D92AF024B900AE3339 /* FirebaseAnalyticsSwift */,
 				833A71DB2AF024B900AE3339 /* FirebaseAnalyticsWithoutAdIdSupport */,
 				833A71DD2AF024B900AE3339 /* FirebaseAppCheck */,
 				833A71E02AF0287700AE3339 /* FirebaseAuth */,
@@ -509,6 +503,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -538,6 +533,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -611,20 +607,10 @@
 			package = 833A71C42AEFF70800AE3339 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAppCheck;
 		};
-		833A71D52AF024B900AE3339 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 833A71C42AEFF70800AE3339 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
 		833A71D72AF024B900AE3339 /* FirebaseAnalyticsOnDeviceConversion */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 833A71C42AEFF70800AE3339 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalyticsOnDeviceConversion;
-		};
-		833A71D92AF024B900AE3339 /* FirebaseAnalyticsSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 833A71C42AEFF70800AE3339 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsSwift;
 		};
 		833A71DB2AF024B900AE3339 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
 			isa = XCSwiftPackageProductDependency;

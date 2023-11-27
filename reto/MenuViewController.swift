@@ -29,8 +29,8 @@ class MenuViewController: UIViewController {
 
     
     @IBAction func ajustesAction(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "AjustesViewController", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "AjustesViewController")
+        let storyboard = UIStoryboard(name: "AprobarUserViewController", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "AprobarUserViewController")
         
         self.navigationController?.pushViewController(vc, animated: true)
     }

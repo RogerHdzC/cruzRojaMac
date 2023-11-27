@@ -41,10 +41,10 @@ class AprobarHorasViewController : UIViewController {
                     let aprobadas = data["aprobadas"] as! Bool
                     let estatus = data["estatus"] as! String
                     let evento = data["evento"] as! String
-                    let evidencia = data["evidencia"] as! String
+                    let evidencia = data["evidencia"] as? String
                     let hrs = data["hrs"] as! Int
                     let idVoluntario = data["idVoluntario"] as! String
-                    let horas = horasVoluntarios(aprobadas: aprobadas, estatus: estatus, evento: evento, evidencia: evidencia, hrs: hrs, idVoluntario: idVoluntario, horasRef: document.reference)
+                    let horas = horasVoluntarios(aprobadas: aprobadas, estatus: estatus, evento: evento, evidencia: evidencia ?? "", hrs: hrs, idVoluntario: idVoluntario, horasRef: document.reference)
                     self.listasHoras.append(horas)
                 }
                 self.tableView.reloadData()

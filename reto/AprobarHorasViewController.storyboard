@@ -15,49 +15,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Uj2-3m-x0f">
-                                <rect key="frame" x="39.666666666666657" y="55.666666666666686" width="314" height="741"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aprobar Horas de Servicio Social." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dR2-Ib-Fql">
+                                <rect key="frame" x="30" y="55" width="300" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="8er-Q8-2Ot"/>
+                                    <constraint firstAttribute="width" secondItem="dR2-Ib-Fql" secondAttribute="height" multiplier="30:11" id="Kgm-rC-fwL"/>
+                                    <constraint firstAttribute="height" constant="110" id="P1H-zA-fJY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <color key="textColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="pNd-en-u2s">
+                                <rect key="frame" x="16" y="173" width="361" height="656.33333333333337"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="aGa-am-Bqe">
-                                        <rect key="frame" x="0.0" y="0.0" width="314" height="154"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aprobar Horas de Servicio Social." lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dR2-Ib-Fql">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="110"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="300" id="8er-Q8-2Ot"/>
-                                                    <constraint firstAttribute="height" constant="110" id="P1H-zA-fJY"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
-                                                <color key="textColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Nombre       ID   Horas  Evento Acciones " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31X-iS-ZTf">
-                                                <rect key="frame" x="0.0" y="133" width="314" height="21"/>
-                                                <color key="backgroundColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="21" id="AfV-Yy-7Sh"/>
-                                                    <constraint firstAttribute="width" constant="314" id="pl1-hV-VSg"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Nombre          ID        Horas  Evento     Acciones " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="31X-iS-ZTf">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="20.333333333333332"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Jax-kS-VDY">
-                                        <rect key="frame" x="0.0" y="154" width="314" height="587"/>
+                                        <rect key="frame" x="0.0" y="50.333333333333371" width="361" height="606"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="314" id="a74-R1-s9b"/>
-                                            <constraint firstAttribute="height" constant="587" id="yaN-HV-DpK"/>
+                                            <constraint firstAttribute="height" constant="606" id="LI3-73-QAV"/>
+                                            <constraint firstAttribute="width" constant="361" id="kPw-Q1-2vL"/>
                                         </constraints>
                                         <color key="sectionIndexBackgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="horasCell" id="hnb-44-CuV">
-                                                <rect key="frame" x="0.0" y="50" width="314" height="43.666667938232422"/>
+                                                <rect key="frame" x="0.0" y="50" width="361" height="43.666667938232422"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hnb-44-CuV" id="IQZ-uP-ULB">
-                                                    <rect key="frame" x="0.0" y="0.0" width="314" height="43.666667938232422"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="361" height="43.666667938232422"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </tableViewCellContentView>
@@ -70,8 +63,11 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Uj2-3m-x0f" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="W7H-pX-Ash"/>
-                            <constraint firstItem="Uj2-3m-x0f" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="zuV-Ra-pXQ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dR2-Ib-Fql" secondAttribute="trailing" constant="63" id="0Sg-vT-aQf"/>
+                            <constraint firstItem="pNd-en-u2s" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="114" id="6NR-he-IYf"/>
+                            <constraint firstItem="dR2-Ib-Fql" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="30" id="6eZ-rm-orr"/>
+                            <constraint firstItem="pNd-en-u2s" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="cOL-H1-2gx"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="top" secondItem="dR2-Ib-Fql" secondAttribute="top" constant="4" id="mHG-XG-CxP"/>
                         </constraints>
                     </view>
                     <connections>

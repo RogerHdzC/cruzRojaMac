@@ -28,25 +28,30 @@ class NuevoAnuncioViewController : UIViewController, UIImagePickerControllerDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        guard let urlString = UserDefaults.standard.value(forKey: "url") as? String, let url = URL(string: urlString) else {
-            return
-        }
-        
-        let task = URLSession.shared.dataTask(with: url, completionHandler: { data, _, error in
-            guard let data = data, error == nil else {
+        if imageView.image == nil {
+            guard let urlString = UserDefaults.standard.value(forKey: "url") as? String, let url = URL(string: urlString) else {
                 return
             }
             
-            DispatchQueue.main.async {
-                let image = UIImage(data: data)
-                self.imageView.image = image
-            }
-        })
-        task.resume()
+            let task = URLSession.shared.dataTask(with: url, completionHandler: { data, _, error in
+                guard let data = data, error == nil else {
+                    return
+                }
+                
+                DispatchQueue.main.async {
+                    let image = UIImage(data: data)
+                    self.imageView.image = image
+                }
+            })
+            task.resume()
+        }
     }
     
     
     @IBAction func uploadFlyer(_ sender: Any) {
+        
+        imageView.image = nil
+
         let picker = UIImagePickerController()
         picker.sourceType = .photoLibrary
         picker.delegate = self
@@ -153,8 +158,15 @@ class NuevoAnuncioViewController : UIViewController, UIImagePickerControllerDele
                 
                 self.present(alertController, animated: true, completion: nil)
             } else {
+                UserDefaults.standard.removeObject(forKey: "url")
+
                 let alertController = UIAlertController(title: "Exito", message: "Anuncio creado con éxito", preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+                alertController.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: { (_) in
+                    // Navegar a la vista deseada después de hacer clic en "Aceptar"
+                        let storyboard = UIStoryboard(name: "MenuViewController", bundle: nil)
+                        let vc = storyboard.instantiateViewController(withIdentifier: "MenuViewController")
+                        self.navigationController?.pushViewController(vc, animated: true)
+                }))
                 
                 self.present(alertController, animated: true, completion: nil)
             }

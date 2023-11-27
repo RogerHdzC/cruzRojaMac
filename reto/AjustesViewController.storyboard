@@ -16,12 +16,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="262" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="yeQ-3K-bSA">
-                                <rect key="frame" x="34.666666666666657" y="639" width="332.66666666666674" height="106"/>
+                                <rect key="frame" x="34" y="559" width="332" height="106"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKG-Yj-hRN">
-                                        <rect key="frame" x="0.0" y="0.0" width="332.66666666666669" height="47"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="332" height="47"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" image="flechita" imagePlacement="trailing" imagePadding="122" titleAlignment="leading">
+                                        <buttonConfiguration key="configuration" style="filled" image="flechita" imagePlacement="trailing" imagePadding="129" titleAlignment="leading">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Nombre de usuario">
                                                     <attributes>
@@ -37,9 +37,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W8O-DF-gDE">
-                                        <rect key="frame" x="0.0" y="59" width="332.66666666666669" height="47"/>
+                                        <rect key="frame" x="0.0" y="59" width="332" height="47"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" image="flechita" imagePlacement="trailing" imagePadding="97" titleAlignment="leading">
+                                        <buttonConfiguration key="configuration" style="filled" image="flechita" imagePlacement="trailing" imagePadding="94" titleAlignment="leading">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Aprobar Nuevo Usuario">
                                                     <attributes>
@@ -58,16 +58,22 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ajustes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDl-mo-Kmu">
-                                <rect key="frame" x="34.666666666666671" y="83" width="162.33333333333331" height="69"/>
+                                <rect key="frame" x="34" y="103" width="162.33333333333334" height="69"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="69" id="nTx-JX-TG4"/>
+                                    <constraint firstAttribute="height" constant="69" id="Tbn-iG-3u8"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                <color key="textColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" red="0.99971204996109009" green="0.19257867336273193" blue="0.19246158003807068" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Icon-App-76x76" translatesAutoresizingMaskIntoConstraints="NO" id="Mbg-uH-zcz">
+                                <rect key="frame" x="76" y="237" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="zg0-8H-l9U"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AdminName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gH-oN-XeD">
-                                <rect key="frame" x="119" y="372" width="155" height="32.333333333333314"/>
+                                <rect key="frame" x="119" y="449" width="155" height="32.333333333333314"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -76,13 +82,17 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="NDl-mo-Kmu" firstAttribute="leading" secondItem="yeQ-3K-bSA" secondAttribute="leading" id="08e-8b-gdx"/>
-                            <constraint firstItem="0gH-oN-XeD" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="372" id="Ixx-mi-P44"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yeQ-3K-bSA" secondAttribute="trailing" constant="25.666666666666686" id="QHg-JK-t9N"/>
-                            <constraint firstItem="NDl-mo-Kmu" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="24" id="gFs-rZ-Lme"/>
-                            <constraint firstItem="0gH-oN-XeD" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="lXb-zX-TMh"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="yeQ-3K-bSA" secondAttribute="bottom" constant="73" id="tMK-2b-qk9"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NDl-mo-Kmu" secondAttribute="trailing" constant="196" id="yUX-VL-zJB"/>
+                            <constraint firstItem="Mbg-uH-zcz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="76" id="2s5-Or-euv"/>
+                            <constraint firstItem="NDl-mo-Kmu" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="44" id="C0g-46-8bt"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="yeQ-3K-bSA" secondAttribute="bottom" constant="153" id="E1X-7u-FmY"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NDl-mo-Kmu" secondAttribute="trailing" constant="196.66666666666669" id="LxV-Wy-X7C"/>
+                            <constraint firstItem="Mbg-uH-zcz" firstAttribute="top" secondItem="NDl-mo-Kmu" secondAttribute="bottom" constant="65" id="Ugy-Xx-Qib"/>
+                            <constraint firstItem="yeQ-3K-bSA" firstAttribute="leading" secondItem="NDl-mo-Kmu" secondAttribute="leading" id="VO2-Ky-Y4N"/>
+                            <constraint firstItem="NDl-mo-Kmu" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="34" id="VwC-Ma-wKX"/>
+                            <constraint firstItem="0gH-oN-XeD" firstAttribute="top" secondItem="Mbg-uH-zcz" secondAttribute="bottom" constant="54" id="lD7-8u-Dny"/>
+                            <constraint firstItem="Mbg-uH-zcz" firstAttribute="centerX" secondItem="0gH-oN-XeD" secondAttribute="centerX" id="q0e-sS-uI5"/>
+                            <constraint firstItem="0gH-oN-XeD" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="qpQ-yk-isn"/>
+                            <constraint firstItem="yeQ-3K-bSA" firstAttribute="top" secondItem="0gH-oN-XeD" secondAttribute="bottom" constant="77.666666666666686" id="rZt-eY-svT"/>
                         </constraints>
                     </view>
                     <connections>
@@ -95,6 +105,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Icon-App-76x76" width="55.666667938232422" height="55.666667938232422"/>
         <image name="flechita" width="33" height="33"/>
     </resources>
 </document>

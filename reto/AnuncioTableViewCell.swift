@@ -13,6 +13,7 @@ class AnuncioTableViewCell: UITableViewCell {
     
     @IBOutlet weak var titleAnuncio: UILabel!
     
+    @IBOutlet weak var evento: UILabel!
     var deleteAction: (() -> Void)?
     
     static func nib() -> UINib {

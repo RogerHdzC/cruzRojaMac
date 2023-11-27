@@ -36,7 +36,7 @@ class DetallesAnuncioViewController : UIViewController {
         let fechaCreacion = dateFormatter.string(from: anuncio.fecha)
         fechaLabel.text = fechaCreacion
         if anuncio.tipo {
-            eventoLabel.text = "Es un envento"
+            eventoLabel.text = "Es un evento"
             horMaxNoEditLabel.isHidden = false
             horasMaxLabel.isHidden = false
             horasMaxLabel.text = "\(anuncio.hrsMax)"

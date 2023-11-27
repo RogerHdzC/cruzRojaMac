@@ -38,11 +38,11 @@ class DashboardViewController : UIViewController {
                 for document in querySnapshot!.documents {
                     let data = document.data()
                     let nombre = data["nombre"] as! String
-                    let ID = data["id"] as! String
+                    let ID = data["matricula"] as? String
                     let horas = data["hrsAcumuladas"] as? Int
                     let rol =   data["rol"] as! DocumentReference
                     
-                    let user = UserServicio(nombre: nombre, ID: ID, horas: horas ?? 0, documentRef: document.reference, rol: rol)
+                    let user = UserServicio(nombre: nombre, ID: ID ?? "", horas: horas ?? 0, documentRef: document.reference, rol: rol)
                     
                     self.listaUsers.append(user)
                 }

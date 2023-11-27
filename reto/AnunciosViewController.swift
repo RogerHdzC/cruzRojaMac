@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import FirebaseFirestore
+import FirebaseStorage
 
 struct Anuncios{
     let author: String
@@ -94,6 +95,14 @@ extension AnunciosViewController : UITableViewDataSource, UITableViewDelegate {
         
         anuncioCell.titleAnuncio.text = anuncio.titulo
         
+        if anuncio.tipo {
+            anuncioCell.evento.isHidden = false
+        }else {
+            anuncioCell.evento.isHidden = true
+        }
+            
+        
+        
         anuncioCell.deleteAction = { [weak self] in
             self?.deleteAction(anuncioReference: anuncio.documentRef)
         }
@@ -102,25 +111,61 @@ extension AnunciosViewController : UITableViewDataSource, UITableViewDelegate {
     }
     
     func deleteAction(anuncioReference: DocumentReference) {
-        db.document(anuncioReference.path).delete { (error) in
-            if let error = error {
-                print("Error: \(error)")
-                let alertController = UIAlertController(title: "Error", message: "Error al eliminar el anuncio", preferredStyle: .alert)
-                alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
-                
-                self.present(alertController, animated: true, completion: nil)
-            }else {
-                // Eliminar el anuncio del array después de eliminarlo en Firestore
-                if let index = self.listasAnuncios.firstIndex(where: { $0.documentRef == anuncioReference }) {
-                    self.listasAnuncios.remove(at: index)
-                }
-
-                // Recargar la tabla para reflejar los cambios en la interfaz de usuario
-                self.tableView.reloadData()
-            }
+        let alertController = UIAlertController(title: "Confirmar eliminación", message: "¿Estás seguro de que quieres eliminar este anuncio? Esta acción es irreversible.", preferredStyle: .alert)
+        
+        // Agregar acciones al UIAlertController para confirmar o cancelar la eliminación
+        alertController.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+        alertController.addAction(UIAlertAction(title: "Eliminar", style: .destructive, handler: { (_) in
+            // Usuario confirmó la eliminación
             
-        }
+            let anuncio = self.listasAnuncios.first { $0.documentRef == anuncioReference }
+            
+            // Verifica si el anuncio tiene una URL de imagen
+            if let imageUrl = anuncio?.imagen,
+               let fileName = URL(string: imageUrl)?.lastPathComponent.removingPercentEncoding {
+                
+                // Referencia al almacenamiento (storage)
+                let storageRef = Storage.storage().reference().child("anuncios/\(fileName)")
+
+                // Elimina la imagen del almacenamiento
+                storageRef.delete { error in
+                    if let error = error {
+                        print("Error al eliminar la imagen del almacenamiento: \(error)")
+                    } else {
+                        print("Imagen eliminada del almacenamiento exitosamente.")
+                    }
+                }
+            }
+
+            // Eliminar el anuncio de Firestore
+            self.db.document(anuncioReference.path).delete { (error) in
+                if let error = error {
+                    print("Error: \(error)")
+                    let alertController = UIAlertController(title: "Error", message: "Error al eliminar el anuncio", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                } else {
+                    // Eliminar el anuncio del array después de eliminarlo en Firestore
+                    if let index = self.listasAnuncios.firstIndex(where: { $0.documentRef == anuncioReference }) {
+                        self.listasAnuncios.remove(at: index)
+                    }
+
+                    // Recargar la tabla para reflejar los cambios en la interfaz de usuario
+                    self.tableView.reloadData()
+                    
+                    // Mostrar un mensaje de éxito después de eliminar el anuncio
+                    let successAlert = UIAlertController(title: "Éxito", message: "Anuncio eliminado con éxito", preferredStyle: .alert)
+                    successAlert.addAction(UIAlertAction(title: "Aceptar", style: .default))
+                    self.present(successAlert, animated: true, completion: nil)
+                }
+            }
+        }))
+        
+        // Presentar el UIAlertController de confirmación
+        self.present(alertController, animated: true, completion: nil)
     }
+
     
     
     
