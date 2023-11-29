@@ -124,7 +124,7 @@ class NuevoAnuncioViewController : UIViewController, UIImagePickerControllerDele
     @IBAction func uploadAction(_ sender: Any) {
         
         let currentUser = Auth.auth().currentUser
-        let author = "/users/\(currentUser!.uid)"
+        let author = self.db.collection("users").document(currentUser!.uid)
         let title = anuncioTitle.text ?? ""
         let hrsMax = Int(horasMax.text ?? "") ?? 0
         let description = descripcion.text ?? ""

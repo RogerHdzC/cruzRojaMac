@@ -53,11 +53,11 @@ class DetallesAprobarHorasViewController : UIViewController {
             let voluntarioData = voluntario.data()
             let nombreVoluntario = voluntarioData?["nombre"] as? String ?? ""
             let ideVoluntario = voluntarioData?["matricula"] as? String ?? ""
-            self.nombreVoluntario.text = "Voluntario: \(nombreVoluntario)"
+            self.nombreVoluntario.text = "\(nombreVoluntario)"
             self.idVoluntario.text = ideVoluntario
         }
 
-        self.horasAprobar.text = "Horas Aprobar \(horas.hrs)"
+        self.horasAprobar.text = "\(horas.hrs)"
         
         if let imageUrl = URL(string: horas.evidencia) {
             DispatchQueue.global().async {

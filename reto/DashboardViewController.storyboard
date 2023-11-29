@@ -39,13 +39,13 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Nombre                   ID                      Horas  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nG4-Ja-Fxo">
                                                 <rect key="frame" x="0.0" y="132.33333333333334" width="314" height="21"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="backgroundColor" red="0.99971204996109009" green="0.19257867336273193" blue="0.19246158003807068" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="21" id="YfN-6j-CsZ"/>
                                                     <constraint firstAttribute="width" constant="314" id="muQ-aD-qxS"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.0187217119" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -70,6 +70,12 @@
                                         </prototypes>
                                     </tableView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Hu5-m4-WlG" secondAttribute="trailing" id="3oE-N5-CTV"/>
+                                    <constraint firstItem="Hu5-m4-WlG" firstAttribute="top" secondItem="rHc-3o-ha3" secondAttribute="bottom" constant="28" id="Cz5-WP-WCj"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hu5-m4-WlG" secondAttribute="bottom" id="Ug2-pa-gyt"/>
+                                    <constraint firstItem="Hu5-m4-WlG" firstAttribute="leading" secondItem="hFu-sU-HHo" secondAttribute="leading" id="jJ4-wh-0y4"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>

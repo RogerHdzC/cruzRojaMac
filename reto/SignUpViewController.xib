@@ -68,8 +68,8 @@
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                             <textInputTraits key="textInputTraits"/>
                         </textField>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo electtronico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrE-N7-8hl">
-                            <rect key="frame" x="0.0" y="79" width="168" height="23"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correo electrónico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrE-N7-8hl">
+                            <rect key="frame" x="0.0" y="79" width="161.33333333333334" height="23"/>
                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                             <color key="textColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <nil key="highlightedColor"/>
@@ -79,7 +79,7 @@
                             <color key="backgroundColor" red="0.96078437569999997" green="0.96078425649999999" blue="0.96078437569999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <color key="tintColor" red="1" green="0.0187217119" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
-                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="iET-Dg-ksa"/>
+                                <constraint firstAttribute="width" constant="300" id="iET-Dg-ksa"/>
                             </constraints>
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -96,7 +96,7 @@
                             <color key="backgroundColor" red="0.96078437569999997" green="0.96078425649999999" blue="0.96078437569999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <color key="tintColor" red="1" green="0.0187217119" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <constraints>
-                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="fkD-XC-86y"/>
+                                <constraint firstAttribute="width" constant="300" id="fkD-XC-86y"/>
                             </constraints>
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="18"/>

@@ -35,6 +35,19 @@ class ConfirmacionViewController: UIViewController{
         emailLabel.text = email
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        // Ocultar la barra de navegación
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        // Mostrar la barra de navegación cuando se va a otro controlador de vista
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
     
     @IBAction func logInAction(_ sender: Any) {
         

@@ -118,7 +118,7 @@
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain">
-                                                            <backgroundConfiguration key="background" image="ajustesmp"/>
+                                                            <backgroundConfiguration key="background" image="aprobar"/>
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <action selector="ajustesAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Nm8-UX-ddp"/>
@@ -166,8 +166,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ajustesmp" width="713" height="672"/>
         <image name="anunciomp" width="646" height="610"/>
+        <image name="aprobar" width="660" height="660"/>
         <image name="dashboardmp" width="512" height="477"/>
         <image name="serviciosocialmp" width="797" height="751"/>
     </resources>

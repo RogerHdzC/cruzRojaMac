@@ -1,9 +1,4 @@
-//
-//  UserHorasTableViewCell.swift
-//  reto
-//
-//  Created by Administrador on 16/11/23.
-//
+// UserHorasTableViewCell.swift
 
 import UIKit
 
@@ -11,33 +6,38 @@ class UserHorasTableViewCell: UITableViewCell {
     
     static let identifier = "UserHorasTableViewCell"
     
-    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var idLabel: UILabel!
     @IBOutlet weak var hrsLabel: UILabel!
     
     static func nib() -> UINib {
-         return UINib(nibName: "UserHorasTableViewCell", bundle: nil)
-     }
-
+        return UINib(nibName: "UserHorasTableViewCell", bundle: nil)
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         selectionStyle = .none
     }
     
-    func setCellColor(isEven: Bool){
+    func setCellColor(isEven: Bool) {
         let colorHex = isEven ? "#EE140A" : "#E56963"  // Cambia los valores hexadecimales según tus necesidades
         backgroundColor = UIColor(hex: colorHex)
-
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        // Agregar borde curvo de color gris claro
+        layer.cornerRadius = 10  // Puedes ajustar el radio según tus preferencias
+        layer.borderWidth = 2.0
+        layer.borderColor = UIColor.gray.withAlphaComponent(0.0).cgColor  // Cambia el valor alfa para ajustar la claridad
+        clipsToBounds = true
+    }
 }
 
 extension UIColor {

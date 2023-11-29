@@ -15,42 +15,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="xh2-es-wQA">
-                                <rect key="frame" x="36" y="167" width="300" height="71.333333333333314"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAN-JA-aNG">
-                                        <rect key="frame" x="0.0" y="0.0" width="40.666666666666664" height="20.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PmX-pH-aTL">
-                                        <rect key="frame" x="0.0" y="37.333333333333343" width="300" height="34"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="300" id="lYs-wp-FYP"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLg-gb-3qG">
-                                <rect key="frame" x="108" y="409" width="177" height="34.333333333333314"/>
+                                <rect key="frame" x="108" y="597" width="177" height="34.333333333333329"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Enviar Instrucciones"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Enviar Instrucciones">
+                                    <color key="baseBackgroundColor" red="0.91800636049999995" green="0.20164617900000001" blue="0.13730716709999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="enviarInstruccionesAction:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Z4J-Cv-JEy"/>
                                     <action selector="enviarInstruccionesAction:" destination="ivu-qF-iUa" eventType="touchUpInside" id="v1F-bP-0v8"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tu correo electrónico" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PmX-pH-aTL">
+                                <rect key="frame" x="40" y="301" width="300" height="34"/>
+                                <color key="backgroundColor" red="0.96078437569999997" green="0.96078425649999999" blue="0.96078437569999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAN-JA-aNG">
+                                <rect key="frame" x="40" y="258" width="47" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.91800636049999995" green="0.20164617900000001" blue="0.13730716709999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recuperar Contraseña" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wz1-mH-5Sv">
+                                <rect key="frame" x="3.6666666666666572" y="105.99999999999999" width="385.66666666666674" height="44.333333333333329"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="37"/>
+                                <color key="textColor" red="0.94223505259999996" green="0.082189761099999994" blue="0.03903532773" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recupera tu contraseña usando tu correo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uix-EH-IXQ">
+                                <rect key="frame" x="40" y="192" width="350" height="20.333333333333332"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="KLg-gb-3qG" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="E7e-i3-ZaU"/>
-                            <constraint firstItem="KLg-gb-3qG" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="ZUs-xw-VhP"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xh2-es-wQA" secondAttribute="trailing" constant="57" id="fTD-6W-qj0"/>
-                            <constraint firstItem="xh2-es-wQA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="108" id="gYg-in-QSz"/>
+                            <constraint firstItem="PmX-pH-aTL" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="301" id="1bT-Tt-ZnM"/>
+                            <constraint firstItem="PmX-pH-aTL" firstAttribute="leading" secondItem="DAN-JA-aNG" secondAttribute="leading" id="P5s-Zj-jD0"/>
+                            <constraint firstItem="KLg-gb-3qG" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="Qei-ym-20J"/>
+                            <constraint firstItem="Wz1-mH-5Sv" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" constant="-297.82999999999998" id="R59-MO-hJV"/>
+                            <constraint firstItem="Uix-EH-IXQ" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="192" id="S6q-Ki-QmC"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Uix-EH-IXQ" secondAttribute="trailing" constant="3" id="aGj-iR-Ci4"/>
+                            <constraint firstItem="PmX-pH-aTL" firstAttribute="top" secondItem="DAN-JA-aNG" secondAttribute="bottom" constant="19" id="bbB-E1-7b8"/>
+                            <constraint firstItem="Uix-EH-IXQ" firstAttribute="top" secondItem="Wz1-mH-5Sv" secondAttribute="bottom" constant="41.666666666666686" id="cag-nA-NKe"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="KLg-gb-3qG" secondAttribute="bottom" constant="186.66666666666663" id="fHw-Uh-O78"/>
+                            <constraint firstItem="DAN-JA-aNG" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="40" id="pMo-Ds-IgW"/>
+                            <constraint firstItem="Wz1-mH-5Sv" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="r4j-Dw-rdQ"/>
+                            <constraint firstItem="Uix-EH-IXQ" firstAttribute="leading" secondItem="DAN-JA-aNG" secondAttribute="leading" id="waQ-6c-tTq"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="PmX-pH-aTL" secondAttribute="trailing" constant="53" id="wvP-MW-ydZ"/>
                         </constraints>
                     </view>
                     <connections>
