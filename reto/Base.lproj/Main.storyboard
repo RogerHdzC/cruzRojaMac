@@ -64,14 +64,6 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDI-gf-7U6">
-                                <rect key="frame" x="67" y="640" width="75" height="34.333333333333371"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
-                                <connections>
-                                    <action selector="ajustes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yll-Ac-NZU"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.91800636049999995" green="0.20164617900000001" blue="0.13730716709999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -82,11 +74,8 @@
                             <constraint firstItem="4vu-49-Ysm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KjX-Sx-PRd"/>
                             <constraint firstItem="yA0-Cd-jH7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-407" id="Ob1-cx-vMs"/>
                             <constraint firstItem="yA0-Cd-jH7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QVL-RI-P4Q"/>
-                            <constraint firstItem="mDI-gf-7U6" firstAttribute="top" secondItem="4vu-49-Ysm" secondAttribute="bottom" constant="80" id="bXv-SW-c2d"/>
-                            <constraint firstItem="mDI-gf-7U6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sjF-lH-OF3"/>
                             <constraint firstItem="4vu-49-Ysm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uO2-4z-pTh"/>
                             <constraint firstAttribute="trailing" secondItem="yA0-Cd-jH7" secondAttribute="trailing" constant="-100" id="vzz-NU-KcS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mDI-gf-7U6" secondAttribute="trailing" constant="251" id="zRh-Nl-1dK"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jt3-NS-kjk"/>

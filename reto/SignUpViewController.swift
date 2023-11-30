@@ -31,6 +31,20 @@ class SignUpViewController: UIViewController {
         
         ojoButton.setTitle("", for: .normal)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        // Ocultar la barra de navegación
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        // Mostrar la barra de navegación cuando se va a otro controlador de vista
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
 
     
     @IBAction func signUpButtonAction(_ sender: Any) {
@@ -45,6 +59,12 @@ class SignUpViewController: UIViewController {
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", passwordPattern)
         let isPasswordValid = passwordTest.evaluate(with: password)
         
+        // Mostrar un indicador de actividad
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.color = .blue
+        activityIndicator.center = view.center
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
         
         if !nombre.isEmpty {
             if !password.isEmpty {
@@ -52,6 +72,10 @@ class SignUpViewController: UIViewController {
                     if isPasswordValid {
                         if password == repassword {
                             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                                
+                                // Ocultar el indicador de actividad
+                                activityIndicator.stopAnimating()
+                                activityIndicator.removeFromSuperview()
                                 
                                 if error != nil {
                                     let alertController = UIAlertController(title: "Error", message: "Se ha producido un error registrando el usuario", preferredStyle: .alert)
@@ -85,30 +109,50 @@ class SignUpViewController: UIViewController {
                                 }
                             }
                         }else{
+                            // Ocultar el indicador de actividad
+                            activityIndicator.stopAnimating()
+                            activityIndicator.removeFromSuperview()
+                            
                             let alertController = UIAlertController(title: "Error", message: "Las contraseñas deben coincidir", preferredStyle: .alert)
                             alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
                             
                             self.present(alertController, animated: true, completion: nil)
                         }
                     }else {
+                        // Ocultar el indicador de actividad
+                        activityIndicator.stopAnimating()
+                        activityIndicator.removeFromSuperview()
+
                         let alertController = UIAlertController(title: "Error", message: "La contraseña no cumple con los requisitos: debe tener al menos 8 caracteres, 2 números y un carácter especial.", preferredStyle: .alert)
                         alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
                         
                         self.present(alertController, animated: true, completion: nil)
                     }
                 }else {
+                    // Ocultar el indicador de actividad
+                    activityIndicator.stopAnimating()
+                    activityIndicator.removeFromSuperview()
+
                     let alertController = UIAlertController(title: "Error", message: "El campo de correo electrónico es obligatorio", preferredStyle: .alert)
                     alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
                     
                     self.present(alertController, animated: true, completion: nil)
                 }
             }else {
+                // Ocultar el indicador de actividad
+                activityIndicator.stopAnimating()
+                activityIndicator.removeFromSuperview()
+
                 let alertController = UIAlertController(title: "Error", message: "El campo de contraseña es obligatorio", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
                 
                 self.present(alertController, animated: true, completion: nil)
             }
         } else {
+            // Ocultar el indicador de actividad
+            activityIndicator.stopAnimating()
+            activityIndicator.removeFromSuperview()
+
             let alertController = UIAlertController(title: "Error", message: "El campo de nombre es obligatorio", preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
             

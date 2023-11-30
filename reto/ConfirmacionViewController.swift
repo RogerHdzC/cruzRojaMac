@@ -52,7 +52,7 @@ class ConfirmacionViewController: UIViewController{
     @IBAction func logInAction(_ sender: Any) {
         
         let viewLogIn = LogInViewController()
-        
+
         self.navigationController?.pushViewController(viewLogIn, animated: true)
         
     }

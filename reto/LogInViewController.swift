@@ -15,38 +15,83 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var logInButton: UIButton!
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         // Analytics Event
         Analytics.logEvent("InitScreen", parameters: ["message":"Integración de Firebase completa"])
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        // Ocultar la barra de navegación
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        // Mostrar la barra de navegación cuando se va a otro controlador de vista
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    
+    @IBAction func crearCuentaAction(_ sender: Any) {
+        
+        let view = SignUpViewController()
+
+        self.navigationController?.pushViewController(view, animated: true)
+        
+    }
     
     @IBAction func logInButtonAction(_ sender: Any) {
         guard let email = emailTextField.text, !email.isEmpty else {
             // Manejar el caso en que el campo de email esté vacío
+            let alertController = UIAlertController(title: "Error", message: "El correo y la contraseña son obligatorios", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+            
+            self.present(alertController, animated: true, completion: nil)
             return
         }
 
         guard let password = passwordTextField.text, !password.isEmpty else {
             // Manejar el caso en que el campo de contraseña esté vacío
+            let alertController = UIAlertController(title: "Error", message: "El correo y la contraseña son obligatorios", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+            
+            self.present(alertController, animated: true, completion: nil)
             return
         }
         
         if(!email.isEmpty && !password.isEmpty){
-            
-            Auth.auth().signIn(withEmail: email, password: password) { [weak self] (authResult, error) in
-                guard let self = self else {return}
+            // Mostrar un indicador de actividad
+            let activityIndicator = UIActivityIndicatorView(style: .large)
+            activityIndicator.color = .blue
+            activityIndicator.center = view.center
+            view.addSubview(activityIndicator)
+            activityIndicator.startAnimating()
+
+            DispatchQueue.global(qos: .userInitiated).async {
                 
-                if error != nil {
-                        
-                    let alertController = UIAlertController(title: "Error", message: "Correo o contraseña incorrectos", preferredStyle: .alert)
-                    alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+                Auth.auth().signIn(withEmail: email, password: password) { [weak self] (authResult, error) in
+                    guard let self = self else {return}
                     
-                    self.present(alertController, animated: true, completion: nil)
-                } else if let user = authResult?.user {
-                    self.verifyUserRoleAndState(user, email: email)
+                    DispatchQueue.main.async {
+                        // Ocultar el indicador de actividad
+                        activityIndicator.stopAnimating()
+                        activityIndicator.removeFromSuperview()
+                        
+                        if error != nil {
+                            
+                            let alertController = UIAlertController(title: "Error", message: "Correo o contraseña incorrectos", preferredStyle: .alert)
+                            alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+                            
+                            self.present(alertController, animated: true, completion: nil)
+                        } else if let user = authResult?.user {
+                            self.verifyUserRoleAndState(user, email: email)
+                        }
+                    }
                 }
             }
         }
